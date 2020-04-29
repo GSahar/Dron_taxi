@@ -1,0 +1,15 @@
+/*Подключение шрифта OpenSans-Regular*/
+@font-face {
+  font-family:Open Sans;
+  src:url(fonts/OpenSans-Regular.woff);
+  font-weight:400;
+  font-style:normal;
+}
+/*Подключение шрифта OpenSans-Bold*/
+@font-face {
+  font-family:Open Sans;
+  src:url(fonts/OpenSans-Bold.woff);
+  font-weight: 700;
+  font-style:normal;
+}
+
