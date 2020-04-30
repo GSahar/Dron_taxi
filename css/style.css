@@ -1,15 +1,203 @@
-/*Подключение шрифта OpenSans-Regular*/
-@font-face {
-  font-family:Open Sans;
-  src:url(fonts/OpenSans-Regular.woff);
-  font-weight:400;
-  font-style:normal;
+body {
+	font-family: Roboto, sans-serif;
 }
-/*Подключение шрифта OpenSans-Bold*/
-@font-face {
-  font-family:Open Sans;
-  src:url(fonts/OpenSans-Bold.woff);
-  font-weight: 700;
-  font-style:normal;
+
+/**/
+.header {
+	box-sizing: border-box;   
+	min-height: 100vh; 
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/Flying-Taxis.jpg");
 }
+
+/**/
+.header:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #660066;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+
+/*содержит в себе логотип и текст*/
+.contain-logo {
+	position: relative;
+	width: 185px;
+	height: 45px;
+	margin-left: 15px;
+	padding-top: 15px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+/* логотип компании*/
+.logo {
+	width: 45px;
+	height: 45px;
+}
+
+/*наименование компании*/
+.logo-text {
+	
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	margin-top: 10px;
+}
+
+/*общий контейнер авторизации*/
+.window-autoris {
+	position: relative;
+
+	margin-top: 145px;
+	margin-left: 80px;
+	
+	max-width: 350px;
+}
+
+/*заголовок формы*/
+.head-form {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	margin-bottom: 12px;
+}
+
+/*форма отправки запроса*/
+.form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*Контейнеры содержащие в себе поля ввода логина и пароля*/
+.input-login,.input-password {
+	display: block;
+	width: 100%;
+	margin-top: 8px;
+}
+
+/*заголовки полей ввода*/
+.heder-input {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CEC8C8;	
+	
+}
+
+/*Поле ввода*/
+.input-field {
+	width: 100%;
+	margin-top: 8px;
+
+	border: solid 2px #00BFFF;
+	border-radius: 5px;
+
+	padding: 0.72em 2em;
+
+	font-size: 14px;
+}
+
+/*Объединение чекбокса и кнопки входа*/
+.group-check-button {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+/*контейнер с чекбоксом */
+.input-check {
+	width: 50%;
+	margin-top: 25px;
+}
+
+/*поле чекбокса*/
+.checkbox {
+    position: absolute;
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    width: 1px;
+}
+
+/*Текст чекбокса*/
+.check-text {
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;	
+}
+
+/*отрисовка своего чекбокса*/
+.check-text::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background-image: url("../svg/input-checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25px;
+    margin-right: 8px;
+}
+
+/*Настройка события при нажатии*/
+.checkbox:checked ~ .check-text::before {	
+	background-image: url("../svg/input-checkbox-check.svg");
+}
+
+/*Общий стиль для кнопок*/
+.button {
+	  display: inline-block;
+	  text-align: center;
+	  text-decoration: none;
+
+	  margin-top: 20px;
+
+	  border: solid 2px #ffffff;
+	  border-radius: 5px;
+
+	  padding: 0.72em 1em;
+	
+	  font-size: 14px;
+	  font-weight: bold;
+	  color: #ffffff;	  
+}
+
+/* событие наведения курсора на кнопку*/
+.button:hover {
+	color: #ffffffd9;
+	box-shadow: #000000b3 0 80px 0px 2px inset;
+}
+
+/*Стиль для синих кнопок*/
+.blue-button {
+	background-color: #00BFFF;
+}
+
+/*стиль для зеленых кнопок*/
+.green-button {
+	background-color: #7FFF7F;
+	color: #202020;
+}
+
+/*Кнопка входа*/
+.button-enter {
+	width: 50%;
+}
+
+/*кнопка регистрации*/
+.button-regist {
+	width: 100%;
+}
+
+
 
