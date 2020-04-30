@@ -8,6 +8,34 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header class="header">    
+        <div class="contain-logo">
+            <img class="logo" src="svg/Logo_Dron_Taxi.svg" alt="логотип">
+            <h2 class="logo-text"> dron taxi</h2>
+        </div>
+        <div class="window-autoris">
+            <h3 class="head-form">авторизация</h3>
+            <form class="form" action="">
+                <div class="input-login">
+                    <label class="heder-input" for="login">Логин</label>
+                    <input type="text" class="input-field" id="login" placeholder="Введите логин">
+                </div>
+                <div class="input-password">
+                    <label class="heder-input" for="pass">Пароль</label>
+                    <input type="password" class="input-field" id="pass" placeholder="Введите пароль">
+                </div>
+                <div class="group-check-button">
+                    <div class="input-check">                
+                        <input class="checkbox" type="checkbox" id="check-save">
+                        <label class="check-text" for="check-save">Запомнить</label>
+                    </div>
+                    <button type="button" onclick="location.href='profile.html';" class="button blue-button button-enter"> Войти</button>
+                </div>
+                
+                <button type="button" onclick="location.href='https://github.com/GSahar/Dron_taxi';" class="button green-button button-regist">Регистарция</button>            
+            </form>
+
+        </div>
+    </header>
 </body>
 </html>
