@@ -9,7 +9,9 @@ body {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../img/Flying-Taxis.jpg");
+	background-image: url("../img/Flying-Taxis.jpg");
+	
+	
 }
 
 /**/
@@ -173,20 +175,32 @@ body {
 }
 
 /* событие наведения курсора на кнопку*/
-.button:hover {
+/*.button:hover {
 	color: #ffffffd9;
-	box-shadow: #000000b3 0 80px 0px 2px inset;
-}
+
+	box-shadow: #286820b3 0 80px 0px 2px inset;
+}*/
 
 /*Стиль для синих кнопок*/
 .blue-button {
 	background-color: #00BFFF;
+}
+.blue-button:hover {
+	color: #ffffffd9;
+	/*border: solid 2px #00BFFF;*/
+	background-color: rgb(0, 135, 180);
+	/*box-shadow: #286820b3 0 80px 0px 2px inset;*/
 }
 
 /*стиль для зеленых кнопок*/
 .green-button {
 	background-color: #7FFF7F;
 	color: #202020;
+}
+.green-button:hover {
+	color: #ffffffd9;
+	/*border: solid 2px #7FFF7F;*/
+	background-color: #128312;
 }
 
 /*Кнопка входа*/
