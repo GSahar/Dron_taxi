@@ -1,7 +1,7 @@
 /*Подключение шрифта Roboto-Regular*/
 @font-face {
 	font-family: "Roboto";
-	src:url(fonts/Roboto-Regular.woff);
+	src:url(fonts/Roboto-Regular.woff2);
 	font-weight:400;
 	font-style:normal;
 }
@@ -9,7 +9,7 @@
 /*Подключение шрифта Roboto-Medium*/
 @font-face {
 	font-family: "Roboto";
-	src:url(fonts/Roboto-Medium.woff);
+	src:url(fonts/Roboto-Medium.woff2);
 	font-weight: 500;
 	font-style:normal;
 }
@@ -17,7 +17,7 @@
 /*Подключение шрифта Roboto-Bold*/
 @font-face {
 	font-family: "Roboto";
-	src:url(fonts/Roboto-Bold.woff);
+	src:url(fonts/Roboto-Bold.woff2);
 	font-weight: 700;
 	font-style:normal;
 }
