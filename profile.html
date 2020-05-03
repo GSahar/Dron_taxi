@@ -5,37 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dron taxi</title>
     <link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style-profile.css">
+    <link rel="stylesheet" href="css/style-profile.css">
+    
 </head>
 <body>
-    <header class="header-profile">    
-        <div class="contain-logo">
-            <img class="logo" src="svg/Logo_Dron_Taxi.svg" alt="логотип">
-            <h2 class="logo-text"> dron taxi</h2>
-        </div>
-        <section class="head-menu"></section>
+    <div class="container">    
+       
+        <section class="left-menu">   
+            <header class="header">
+                <div class="contain-logo">
+                    <img class="logo" src="svg/Logo_Dron_Taxi.svg" alt="логотип">
+                    <h2 class="logo-text"> dron taxi</h2>
+                </div>  
+            </header>
+                        
+            <div class="container-menu">
+                
+                <div class="items-menu">  
+                    <input class="checkbox-menu" type="radio" name="menu" id="check-prof" checked>
+                    <label class="for-checkbox check-prof" for="check-prof">
+                        <i class='uil uil-check-prof'></i>
+                        <a class="link-menu" href="">Профиль</a>
+                    </label>      
+                <!--/div>
+
+                <div class="items-menu"--> 
+                    <input class="checkbox-menu" type="radio" name="menu" id="check-user" checked>
+                    <label class="for-checkbox check-user" for="check-user">
+                        <i class='uil uil-check-user'></i>
+                        <a class="link-menu" href="">Упр. пользователями</a>
+                    </label>  
+                <!--/div>
+
+                <div class="items-menu"--> 
+                    <input class="checkbox-menu" type="radio" name="menu" id="check-role" checked>
+                    <label class="for-checkbox check-role" for="check-role">
+                        <i class='uil uil-check-role'></i>
+                        <a class="link-menu" href="">Упр. ролями</a>
+                    </label>  
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="items-menu"> 
+                    <input class="checkbox-menu" type="radio" name="menu" id="check-exit" checked>
+                    <label class="for-checkbox check-exit" for="check-exit">
+                        <i class='uil uil-check-exit'></i>
+                        <a class="link-menu" href="">Выход</a>
+                    </label>  
+                </div>
+            </footer>   
+        </section>
+
         <div class="main-contant">
-            <section class="left-menu">               
-                    
-                <div class="items-menu">
-                    <a class="item" href="">Профиль</a>
-                </div>
-                <div class="items-menu">
-                    <a class="item" href="">Упр. пользователями</a>
-                </div>
-                <div class="items-menu">
-                    <a class="item" href="">Упр. ролями</a>
-                </div>
-                <div class="items-menu">
-                    <a class="item" href="">Выход</a>
-                </div>                   
-                  
+            <section class="head-menu">
+
             </section>
+           
         
             <div class="container-contant">
                 <h2 class="head-contant">Мой профиль</h2>
                 <section class="contant">
-                   
+                    <button class="tablink" onclick="openPage('Home', this, '#800080') " id="defaultOpen">Профиль</button>
+                    <button class="tablink" onclick="openPage('News', this, '#800080')" >Роли</button>
+
+                    <div id="Home" class="tabcontent">
+                        <h3>Профиль</h3>
+                    </div>
+
+                    <div id="News" class="tabcontent">
+                        <h3>Роли</h3>
+                    </div>
                     
                 </section>
 
@@ -43,6 +82,8 @@
 
         </div>
         
-    </header>
+    </div>
+
+    <script src="js/tabPage.js"></script>
 </body>
 </html>
