@@ -96,19 +96,19 @@ body {
 
 .check-prof {
 	background-size: 19px;
-	background-image: url("../svg/profile.svg");
+	background-image: url("svg/profile.svg");
 }
 
 .check-user { 
-	background-image: url("../svg/manag-user.svg");
+	background-image: url("svg/manag-user.svg");
 }
 
 .check-role {
-	background-image: url("../svg/manag-role.svg");
+	background-image: url("svg/manag-role.svg");
 }
 
 .check-exit {
-	background-image: url("../svg/exit.svg");
+	background-image: url("svg/exit.svg");
 	
 }
 
@@ -231,5 +231,5 @@ section {
 	height: 100%;
   }
   
-  #Home {background-color:#800080;}
-  #News {background-color: #800080;}
+  #Profile {background-color:#800080;}
+  #Role {background-color: #800080;}
