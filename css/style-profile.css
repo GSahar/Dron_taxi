@@ -1,4 +1,4 @@
-/*Подключение шрифта Roboto-Regular*/
+/* #region Подключение шрифта Roboto-Regular*/
 @font-face {
 	font-family: Roboto;
 	src:url(fonts/Roboto-Regular.woff), 
@@ -25,9 +25,16 @@
 	font-style:normal;
 }
 
+/*#endregion*/
+
 body {
 	font-family: Roboto, sans-serif;
 	background-color: #660066;
+}
+
+/*Цвет фона для всех секций*/
+section {
+	background-color: #800080;
 }
 
 .container {
@@ -38,6 +45,8 @@ body {
 .header {
 	height: 11%;
 }
+
+/*#region стиль для логотипа*/
 /*содержит в себе логотип и текст*/
 .contain-logo {
 	position: absolute;
@@ -66,54 +75,68 @@ body {
 	margin-top: 10px;
 }
 
+/* #endregion*/
+
+/* #region стили для бокового меню - вообще эту херню переделаю */
+
+/*Основной контейнер*/
 .container-menu {
 	height: 82%;
 	padding-top: 20%;
 }
 
+/*Левое меню*/
+.left-menu {
+	max-width: 300px;
+	min-width: 300px;
+	height: 100vh; 
+}
 
+/*контейнер и пунктами*/
 .items-menu {
-	width: 240px;
-	/*padding: 10px 0;*/
-	
+	width: 240px;	
 	margin: 0 auto;
 }
 
-.for-checkbox {
-
+/*стиль для надписи чекбокса*/
+.lettet-checkbox {
 	background-size: 26px;
-
 	background-position: 10px 7px;
 	background-repeat: no-repeat;
 	border-bottom: 2px solid #800080;
 	margin-bottom: 5px;
 }
 
-.for-checkbox:hover {
-	
+/*Стиль при наведении*/
+.lettet-checkbox:hover {	
 	border-bottom: 2px solid #7fff7fe6;
 }
 
+/*Стиль для чекбокса профиля*/
 .check-prof {
 	background-size: 19px;
 	background-image: url("../svg/profile.svg");
 }
 
+/*стиль для раздела управление пользователями*/
 .check-user { 
 	background-image: url("../svg/manag-user.svg");
 }
 
+/*стиль для раздела управление ролями*/
 .check-role {
 	background-image: url("../svg/manag-role.svg");
 }
 
+/*стиль для кнопки выход*/
 .check-exit {
 	background-image: url("../svg/exit.svg");
 	
 }
 
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked),
+/*Общие настройки для чекбокса и радио*/
+/*[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked),*/
 [type="radio"]:checked,
 [type="radio"]:not(:checked){
 	position: absolute;
@@ -123,6 +146,7 @@ body {
 	visibility: hidden;
 }
 
+/*стиль для пункта меню */
 .checkbox-menu:checked + label,
 .checkbox-menu:not(:checked) + label {
 	position: relative;
@@ -133,36 +157,35 @@ body {
 	color: #000000;
 }
 
+/*стиль для пункта меню когда не нажат*/
 .checkbox-menu:not(:checked) + label{
     background-color:transparent;
 }
 
+/*Стиль для пункта когда нажат*/
 .checkbox-menu:checked + label{
     background-color: #7fff7f66;
 }
 
-.checkbox-menu:checked + label .uil,
-.checkbox-menu:not(:checked) + label .uil{
+/*стиль для надписи пункта*/
+.checkbox-menu:checked + label .link-menu,
+.checkbox-menu:not(:checked) + label .link-menu{
 	font-size: 14px;
-	line-height: 24px;
+	line-height: 20px;
 	display: block;
 	padding-bottom: 0;
 }
 
+/*стиль для ссылки в пункте*/
 .link-menu {
 	text-decoration: none;
 	font-weight: 500;
 	color: #FDFDFD;
 	
-	margin: 20px 0 20px 55px;
+	margin-left:55px;
 }
 
-
-
-/*Цвет фона для всех секций*/
-section {
-	background-color: #800080;
-}
+/* #endregion */
 
 /*Верхнее меню*/
 .head-menu {
@@ -177,13 +200,6 @@ section {
 	width: 100%;
 }
 
-/*Левое меню 91.8vh;*/
-.left-menu {
-	max-width: 300px;
-	min-width: 300px;
-	height: 100vh; 
-	/*89.28vh*/
-}
 
 /*Заголовок контейнера с данными пользователя*/
 .head-contant {
@@ -215,11 +231,11 @@ section {
 	padding: 10px;
 	font-size: 14px;
 	font-weight: 700;
-	width: 15%;
+	width: 20%;
   }
   
   .tablink:hover {
-	background-color: #b61fb6;
+	background-color: #973E95;
 	
   }
   
