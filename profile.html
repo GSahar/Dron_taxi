@@ -45,7 +45,7 @@
                     </label>  
                 </div>
             </div>
-            <footer class="footer">
+            <footer class="footer-menu">
                 <div class="items-menu"> 
                     <input class="checkbox-menu" type="radio" name="menu" id="check-exit" checked>
                     <label class="for-checkbox check-exit" for="check-exit">
@@ -65,14 +65,62 @@
             <div class="container-contant">
                 <h2 class="head-contant">Мой профиль</h2>
                 <section class="contant">
-                    <button class="tablink" onclick="openPage('Home', this, '#800080') " id="defaultOpen">Профиль</button>
-                    <button class="tablink" onclick="openPage('News', this, '#800080')" >Роли</button>
+                    <button class="tablink" onclick="openPage('Profile', this, '#800080') " id="defaultOpen">Личные данные</button>
+                    <button class="tablink" onclick="openPage('Role', this, '#800080')" >Роли</button>
 
-                    <div id="Home" class="tabcontent">
-                        <h3>Профиль</h3>
+                    <div id="Profile" class="tabcontent">
+                        <div class="header">
+                            <button class="button-edit">Редактировать</button>
+                        </div>
+                        <div class="content-profile">
+                            <div class="container-image">
+                                <div class="image-profile"></div>
+                                <button class="image-update"> Обновить</button>
+                            </div>
+                            <div class="data-profile">
+                                <div class="input-surname">
+                                    <label class="heder-input" for="surname">Фамилия*</label>
+                                    <input type="text" class="input-field" id="surname" placeholder="Введите фамилию">
+                                </div>
+
+                                <div class="input-name">
+                                    <label class="heder-input" for="name">Имя*</label>
+                                    <input type="text" class="input-field" id="name" placeholder="Введите имя">
+                                </div>
+
+                                <div class="input-patronymic">
+                                    <label class="heder-input" for="patronymic">Отчество*</label>
+                                    <input type="text" class="input-field" id="patronymic" placeholder="Введите отчество">
+                                </div>
+                                <div class="group-date-sex">
+                                    <div class="input-dob">
+                                        <label class="heder-input" for="dob">Дата рождения*</label>
+                                        <input type="text" class="input-field" id="dob" placeholder="Введите дату">
+                                    </div>
+                                    <div class="content-sex">
+                                        <div class="input-sex-text">
+                                            <label class="heder-input" for="sex-text">Пол</label>
+                                            <input type="text" class="input-field" id="sex-text">
+                                        </div>
+
+                                        <div class="group-check-sex">
+                                            <label class="check-text" for="input-check">Пол</label>
+                                            <div class="input-check" id="input-check">                
+                                                <input class="checkbox" type="checkbox" id="check-save-man">
+                                                <label class="check-text" for="check-save-man">м</label>
+                                                <input class="checkbox" type="checkbox" id="check-save-woman">
+                                                <label class="check-text" for="check-save-woman">ж</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="footer-profile">
+                        </footer>
                     </div>
 
-                    <div id="News" class="tabcontent">
+                    <div id="Role" class="tabcontent">
                         <h3>Роли</h3>
                     </div>
                     
