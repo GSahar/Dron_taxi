@@ -20,139 +20,147 @@
             </header>
                         
             <div class="container-menu">
-                
-                <div class="items-menu">  
-                    <input class="checkbox-menu" type="radio" name="menu" id="check-prof" checked>
-                    <label class="lettet-checkbox check-prof" for="check-prof">
-                        <a class="link-menu" href="">Профиль</a>
-                    </label>      
-                <!--/div>
-
-                <div class="items-menu"--> 
-                    <input class="checkbox-menu" type="radio" name="menu" id="check-user" checked>
-                    <label class="lettet-checkbox check-user" for="check-user">
-                        <a class="link-menu" href="">Упр. пользователями</a>
-                    </label>  
-                <!--/div>
-
-                <div class="items-menu"--> 
-                    <input class="checkbox-menu" type="radio" name="menu" id="check-role" checked>
-                    <label class="lettet-checkbox check-role" for="check-role">
-                        
-                        <a class="link-menu" href="">Упр. ролями</a>
-                    </label>  
+                <div class="items-menu"> 
+                    <button class="tablink-menu" onclick="openMenuPage('container-profile', this, '#7fff7f66') " id="defaultOpenMenu"><span class="button-text button-prof">Профиль</span></button>
+                    <button class="tablink-menu" onclick="openMenuPage('container-user', this, '#7fff7f66')" ><span class="button-text button-user">Упр. пользователями</span></button>
+                    <button class="tablink-menu" onclick="openMenuPage('container-role', this, '#7fff7f66')" ><span class="button-text button-role">Упр. ролями</span></button>
                 </div>
             </div>
+
             <footer class="footer-menu">
                 <div class="items-menu"> 
-                    <input class="checkbox-menu" type="radio" name="menu" id="check-exit" checked>
-                    <label class="lettet-checkbox check-exit" for="check-exit">
-                        
-                        <a class="link-menu" href="">Выход</a>
-                    </label>  
+                    <button class="tablink-menu" onclick="openMenuPage('container-exit', this, '#7fff7f66')" ><span class="button-text button-exit">Выход</span></button>
                 </div>
             </footer>   
         </section>
-
         <div class="main-contant">
             <section class="head-menu">
 
             </section>
            
         
-            <div class="container-contant">
-                <h2 class="head-contant">Мой профиль</h2>
-                <section class="contant">
-                    <button class="tablink" onclick="openPage('Profile', this, '#800080') " id="defaultOpen">Личные данные</button>
-                    <button class="tablink" onclick="openPage('Role', this, '#800080')" >Роли</button>
+            <div class="container-contant" > 
+                <div class="container-profile tabcontent-menu" id="container-profile">
+                    <h2 class="head-contant">Мой профиль</h2>
+                    <section class="contant">
+                        <button class="tablink" onclick="openPage('Profile', this, '#800080') " id="defaultOpen">Личные данные</button>
+                        <button class="tablink" onclick="openPage('Role', this, '#800080')" >Роли</button>
 
-                    <div id="Profile" class="tabcontent">
-                        <div class="header">
-                            <button class="button-edit">Редактировать</button>
-                        </div>
-                        <div class="content-profile">
-                            <div class="container-image">
-                                <div class="image-profile"></div>
-                                <button class="image-update"> Обновить</button>
+                        <div id="Profile" class="tabcontent">
+                            <div class="header">
+                                <button class="button blue-button button-edit">Редактировать</button>
                             </div>
-                            <div class="data-profile">
-                                <div class="input-surname">
-                                    <label class="heder-input" for="surname">Фамилия*</label>
-                                    <input type="text" class="input-field" id="surname" placeholder="Введите фамилию">
+                            <div class="content-profile">
+                                <div class="container-image">
+                                    <div class="image-profile"></div>
+                                    <button class="button blue-button image-update"> Обновить</button>
                                 </div>
-
-                                <div class="input-name">
-                                    <label class="heder-input" for="name">Имя*</label>
-                                    <input type="text" class="input-field" id="name" placeholder="Введите имя">
-                                </div>
-
-                                <div class="input-patronymic">
-                                    <label class="heder-input" for="patronymic">Отчество*</label>
-                                    <input type="text" class="input-field" id="patronymic" placeholder="Введите отчество">
-                                </div>
-                                <div class="group-date-sex">
-                                    <div class="input-dob">
-                                        <label class="heder-input" for="dob">Дата рождения*</label>
-                                        <input type="text" class="input-field" id="dob" placeholder="Введите дату">
+                                <div class="data-profile">
+                                    <div class="input-surname">
+                                        <label class="heder-input" for="surname">Фамилия*</label>
+                                        <input type="text" class="input-field" id="surname" placeholder="Введите фамилию">
                                     </div>
-                                    <div class="content-sex">
-                                        <div class="input-sex-text">
-                                            <label class="heder-input" for="sex-text">Пол</label>
-                                            <input type="text" class="input-field" id="sex-text">
-                                        </div>
 
-                                        <div class="group-check-sex">
-                                            <label class="check-text" for="input-check">Пол</label>
-                                            <div class="input-check" id="input-check">                
-                                                <input class="checkbox" type="checkbox" id="check-save-man">
-                                                <label class="check-text" for="check-save-man">м</label>
-                                                <input class="checkbox" type="checkbox" id="check-save-woman">
-                                                <label class="check-text" for="check-save-woman">ж</label>
+                                    <div class="input-name">
+                                        <label class="heder-input" for="name">Имя*</label>
+                                        <input type="text" class="input-field" id="name" placeholder="Введите имя">
+                                    </div>
+
+                                    <div class="input-patronymic">
+                                        <label class="heder-input" for="patronymic">Отчество*</label>
+                                        <input type="text" class="input-field" id="patronymic" placeholder="Введите отчество">
+                                    </div>
+                                    <div class="group-date-sex">
+                                        <div class="input-dob">
+                                            <label class="heder-input" for="dob">Дата рождения*</label>
+                                            <input type="text" class="input-field" id="dob" placeholder="Введите дату">
+                                        </div>
+                                        <div class="content-sex">
+                                            <div class="input-sex-text">
+                                                <label class="heder-input" for="sex-text">Пол</label>
+                                                <input type="text" class="input-field" id="sex-text">
                                             </div>
+
+                                            <div class="group-check-sex">
+                                                <div class="heder-input">Пол</div>
+                                                <input type="radio" id="r1" name="rr" />
+                                                <label for="r1"><span></span>м</label>
+                                            
+                                                <input type="radio" id="r2" name="rr" />
+                                                <label for="r2"><span></span>ж</label>                                           
+                                            
+                                            </div>
+                                            
                                         </div>
-                                    </div>
-                                    <div class="input-patronymic">
-                                        <label class="heder-input" for="email">Email*</label>
-                                        <input type="email" class="input-field" id="email" placeholder="Введите адрес почты">
-                                    </div>
+                                        <div class="input-patronymic">
+                                            <label class="heder-input" for="email">Email*</label>
+                                            <input type="email" class="input-field" id="email" placeholder="Введите адрес почты">
+                                        </div>
 
-                                    <div class="input-patronymic">
-                                        <label class="heder-input" for="telephon">Телефон</label>
-                                        <input type="tel" class="input-field" id="telephon" placeholder="Введите номер">
-                                    </div>
+                                        <div class="input-patronymic">
+                                            <label class="heder-input" for="telephon">Телефон</label>
+                                            <input type="tel" class="input-field" id="telephon" placeholder="Введите номер">
+                                        </div>
 
-                                    <div class="input-patronymic">
-                                        <label class="heder-input" for="pass">Пароль*</label>
-                                        <input type="tel" class="input-field" id="pass" placeholder="Введите пароль">
-                                    </div>
+                                        <div class="input-patronymic">
+                                            <label class="heder-input" for="pass">Пароль*</label>
+                                            <input type="password" class="input-field" id="pass" placeholder="Введите пароль">
+                                        </div>
 
-                                    <div class="input-patronymic">
-                                        <label class="heder-input" for="conf-pass">Подтвердить пароль*</label>
-                                        <input type="tel" class="input-field" id="conf-pass" placeholder="Повторите пароль">
+                                        <div class="input-patronymic">
+                                            <label class="heder-input" for="conf-pass">Подтвердить пароль*</label>
+                                            <input type="password" class="input-field" id="conf-pass" placeholder="Повторите пароль">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <footer class="footer-profile">
+                                <div class="group-button">
+                                    <button class="button green-button button-save">Сохранить</button>
+                                    <button class="button blue-button button-cancel">Отмена</button>
+                                </div>
+                            </footer>
                         </div>
+                        <div id="Role" class="tabcontent">
+                            <h3>Роли</h3>
+                        </div>                        
+                    </section>
+                </div>
+
+                <div class="container-user tabcontent-menu" id="container-user">
+                    <h2 class="head-contant">Управление пользователями</h2>
+                    <section class="contant">
                         <footer class="footer-profile">
                             <div class="group-button">
-                                <button class="button-save">Сохранить</button>
-                                <button class="button-cancel">Отмена</button>
+                                <button class="button green-button button-save">Сохранить</button>
+                                <button class="button blue-button button-cancel">Отмена</button>
                             </div>
                         </footer>
-                    </div>
+                    </section>
+                </div>
 
-                    <div id="Role" class="tabcontent">
-                        <h3>Роли</h3>
-                    </div>
-                    
-                </section>
+                <div class="container-role tabcontent-menu" id="container-role">
+                    <h2 class="head-contant">Управление ролями</h2>
+                    <section class="contant">
+                        <footer class="footer-profile">
+                            <div class="group-button">
+                                <button class="button green-button button-save">Сохранить</button>
+                                <button class="button blue-button button-cancel">Отмена</button>
+                            </div>
+                        </footer>
+                    </section>
+                </div>
 
             </div>
+
+            
 
         </div>
         
     </div>
 
+   
+    <script src="js/tabMenuPage.js"></script>
     <script src="js/tabPage.js"></script>
 </body>
 </html>
