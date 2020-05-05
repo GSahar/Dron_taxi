@@ -383,7 +383,7 @@ input[type="radio"]:checked + label span {
 	display: none;
 }
 
-.header {
+.header-profile {
 	display: flex;
 	justify-content: flex-end;
 	width: 97.5%;
