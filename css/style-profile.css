@@ -116,7 +116,7 @@ section {
 
 .button-text {
 	background-size: 26px;
-	background-position: 0 5px;
+	background-position: 0 6px;
 	background-repeat: no-repeat;
 	padding: 0.65em 1em;
 
@@ -201,13 +201,6 @@ section {
 	margin-bottom: 15px;
 }
 
-/*Контейнер с данными пользователя*/
-.container-contant {
-	padding: 20px 30px;
-	width: 100%;
-	height: 100%;
-}
-  
 /* стиль для кнопки вкладки */
 .tablink {
 	background-color: #991199;
@@ -231,10 +224,24 @@ section {
 .tabcontent {
 	color: white;
 	display: none;
-	padding: 100px 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 55px;
 	height: 100%;
 	background-color:#800080;
 }  
+
+/*Контейнер с данными пользователя*/
+.container-contant {
+	padding: 20px 30px;
+	width: 100%;
+	height: 85%;
+}
+ 
+.content-profile {
+	margin-top: 20px;
+	display: flex;
+}
 
 /*заголовки полей ввода*/
 .heder-input {
@@ -242,6 +249,12 @@ section {
 	font-weight: bold;
 	color: #CEC8C8;	
 	
+}
+
+.data-profile {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 /*Поле ввода*/
@@ -256,6 +269,11 @@ section {
 
 	font-size: 14px;
 }
+
+.input {
+	width: 100%;
+}
+
 
 input[type="radio"] + label span {
     display:inline-block;
@@ -313,4 +331,80 @@ input[type="radio"]:checked + label span {
 	background-color: #128312;
 }
 
+.container-image {
+	width: 135px;
+	height: 100%;
+	margin-right: 5%;
+	
+}
+
+.image-profile {
+	width: 135px;
+	height: 135px;
+	background-image: url("../img/imageProfule.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	border: 2px solid #ffffff;
+}
+
+.image-update {
+	width: 100%;
+	margin-top: 25px;
+}
+
+.group-date-sex {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.group-check-sex {
+	margin-top: 15px;
+}
+
+.input-dob {
+	width: 45%;
+}
+
+.content-sex{
+	width: 45%;
+}
+
+.profile-block1 {
+	margin-right: 7%;
+	width: 45%;
+}
+.profile-block2 {
+	width: 45%;
+}
+
+.input-sex-text {
+	display: none;
+}
+
+.header {
+	display: flex;
+	justify-content: flex-end;
+	width: 97.5%;
+}
+
+.footer-profile {
+	display: flex;
+	justify-content: flex-end;
+	width: 97.5%;
+
+	margin-top: 6%;
+	padding-bottom: 30px;
+}
+
+
+.button-save {
+	width: 150px;
+	margin-right: 30px;
+}
+
+.button-cancel {
+	width: 120px;
+}
 /*#endregion*/
