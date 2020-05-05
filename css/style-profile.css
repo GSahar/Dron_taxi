@@ -37,16 +37,29 @@ section {
 	background-color: #800080;
 }
 
+/*Общие настройки для чекбокса и радио*/
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked),
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+	position: absolute;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+/*контейнер для всей страницы*/
 .container {
 	display: flex;
 	flex-wrap: nowrap;
 }
 
+/*#region стиль для логотипа*/
 .header {
 	height: 11%;
 }
 
-/*#region стиль для логотипа*/
 /*содержит в себе логотип и текст*/
 .contain-logo {
 	position: absolute;
@@ -96,95 +109,75 @@ section {
 .items-menu {
 	width: 240px;	
 	margin: 0 auto;
+
+	font-weight: 500;
+	color: #FDFDFD;
 }
 
-/*стиль для надписи чекбокса*/
-.lettet-checkbox {
+.button-text {
 	background-size: 26px;
-	background-position: 10px 7px;
+	background-position: 0 5px;
 	background-repeat: no-repeat;
-	border-bottom: 2px solid #800080;
-	margin-bottom: 5px;
-}
+	padding: 0.65em 1em;
 
-/*Стиль при наведении*/
-.lettet-checkbox:hover {	
-	border-bottom: 2px solid #7fff7fe6;
+	padding-left: 60px;
 }
 
 /*Стиль для чекбокса профиля*/
-.check-prof {
+.button-prof {
 	background-size: 19px;
 	background-image: url("../svg/profile.svg");
 }
 
 /*стиль для раздела управление пользователями*/
-.check-user { 
+.button-user { 
 	background-image: url("../svg/manag-user.svg");
 }
 
 /*стиль для раздела управление ролями*/
-.check-role {
+.button-role {
 	background-image: url("../svg/manag-role.svg");
 }
 
 /*стиль для кнопки выход*/
-.check-exit {
-	background-image: url("../svg/exit.svg");
-	
+.button-exit {
+	background-image: url("../svg/exit.svg");	
 }
-
-/*Общие настройки для чекбокса и радио*/
-/*[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked),*/
-[type="radio"]:checked,
-[type="radio"]:not(:checked){
-	position: absolute;
-	left: -9999px;
-	width: 0;
-	height: 0;
-	visibility: hidden;
-}
-
-/*стиль для пункта меню */
-.checkbox-menu:checked + label,
-.checkbox-menu:not(:checked) + label {
-	position: relative;
-	display: block;
-	font-size: 14px;;
-	padding: 10px;
-	width: 100%;
-	color: #000000;
-}
-
-/*стиль для пункта меню когда не нажат*/
-.checkbox-menu:not(:checked) + label{
-    background-color:transparent;
-}
-
-/*Стиль для пункта когда нажат*/
-.checkbox-menu:checked + label{
-    background-color: #7fff7f66;
-}
-
-/*стиль для надписи пункта*/
-.checkbox-menu:checked + label .link-menu,
-.checkbox-menu:not(:checked) + label .link-menu{
+/* стиль для кнопки вкладки */
+.tablink-menu {
+	background-color: #800080;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
 	font-size: 14px;
-	line-height: 20px;
-	display: block;
-	padding-bottom: 0;
-}
-
-/*стиль для ссылки в пункте*/
-.link-menu {
-	text-decoration: none;
 	font-weight: 500;
-	color: #FDFDFD;
-	
-	margin-left:55px;
+	width: 100%;
+	display: block;
+	border-bottom: 2px solid #800080;
+	text-align: left;
+	padding: 0.58em 1em;
 }
 
+/*для каждого четного элемента tablink-menu прибавляется отступ серху и снизу*/
+.tablink-menu:nth-child(even) {
+	margin: 5px 0;
+}
+
+/*При наведении*/
+.tablink-menu:hover {
+	border-bottom: 2px solid #7fff7fe6;
+}
+
+/* Стиль для содержимого вкладок */
+.tabcontent-menu {
+	color: white;
+	display: none;
+	/*padding: 100px 20px;*/
+	height: 100%;
+	/*background-color:#800080;*/
+}  
 /* #endregion */
 
 /*Верхнее меню*/
@@ -193,13 +186,12 @@ section {
 	height: 75px;
 }
 
-/*Контайнер с основным собержимым*/
+/* #region Контайнер с основным собержимым*/
 .main-contant {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 }
-
 
 /*Заголовок контейнера с данными пользователя*/
 .head-contant {
@@ -214,14 +206,10 @@ section {
 	padding: 20px 30px;
 	width: 100%;
 	height: 100%;
-	/*margin: 0 auto;*/
 }
-
-/* Set height of body and the document to 100% to enable "full page tabs" */
-
   
-  /* Style tab links */
-  .tablink {
+/* стиль для кнопки вкладки */
+.tablink {
 	background-color: #991199;
 	color: white;
 	float: left;
@@ -232,20 +220,97 @@ section {
 	font-size: 14px;
 	font-weight: 700;
 	width: 20%;
-  }
-  
-  .tablink:hover {
+}
+
+/*При наведении*/
+.tablink:hover {
 	background-color: #973E95;
-	
-  }
-  
-  /* Style the tab content (and add height:100% for full page content) */
-  .tabcontent {
+}
+
+/* Стиль для содержимого вкладок */
+.tabcontent {
 	color: white;
 	display: none;
 	padding: 100px 20px;
 	height: 100%;
-  }
+	background-color:#800080;
+}  
+
+/*заголовки полей ввода*/
+.heder-input {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CEC8C8;	
+	
+}
+
+/*Поле ввода*/
+.input-field {
+	width: 100%;
+	margin-top: 8px;
+
+	border: solid 2px #00BFFF;
+	border-radius: 5px;
+
+	padding: 0.72em 2em;
+
+	font-size: 14px;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:25px;
+    height:25px;
+    margin:2px 10px 0 0;
+    vertical-align:middle;
+	background-image:url("../svg/input-checkbox.svg")  ;/**/
+	background-repeat: no-repeat;
+	background-position: 0 top;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+	background-image:url("../svg/input-checkbox-check.svg"); /* */
+	background-position: 0 top ;
+	background-repeat: no-repeat;
+}  
+
+/*Общий стиль для кнопок*/
+.button {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+
+	border: solid 2px #ffffff;
+	border-radius: 5px;
+
+	padding: 0.72em 1em;
   
-  #Profile {background-color:#800080;}
-  #Role {background-color: #800080;}
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;	  
+}
+
+/*Стиль для синих кнопок*/
+.blue-button {
+	background-color: #00BFFF;
+}
+.blue-button:hover {
+	color: #ffffffd9;
+	/*border: solid 2px #00BFFF;*/
+	background-color: rgb(0, 135, 180);
+	/*box-shadow: #286820b3 0 80px 0px 2px inset;*/
+}
+
+/*стиль для зеленых кнопок*/
+.green-button {
+	background-color: #7FFF7F;
+	color: #202020;
+}
+.green-button:hover {
+	color: #ffffffd9;
+	/*border: solid 2px #7FFF7F;*/
+	background-color: #128312;
+}
+
+/*#endregion*/
