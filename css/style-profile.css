@@ -37,11 +37,15 @@ section {
 	background-color: #800080;
 }
 
+
+
 /*Общие настройки для чекбокса и радио*/
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked),
 [type="radio"]:checked,
-[type="radio"]:not(:checked){
+[type="radio"]:not(:checked),
+[type="file"]:checked,
+[type="file"]:not(:checked){
 	position: absolute;
 	left: -9999px;
 	width: 0;
@@ -154,6 +158,7 @@ section {
 	font-size: 14px;
 	font-weight: 500;
 	width: 100%;
+	height: 40px;
 	display: block;
 	border-bottom: 2px solid #800080;
 	text-align: left;
@@ -233,7 +238,7 @@ section {
 
 /*Контейнер с данными пользователя*/
 .container-contant {
-	padding: 20px 30px;
+	padding: 20px 30px 0 30px;
 	width: 100%;
 	height: 85%;
 }
@@ -257,10 +262,24 @@ section {
 	flex-wrap: wrap;
 }
 
+
+
+::-webkit-calendar-picker-indicator {
+	color: transparent;
+	opacity: 1;
+	margin-left: 5px;
+	background: url("../svg/calendar.svg") no-repeat center;
+	background-size: contain;
+	width: 17px;
+	height: 17px;
+}
+
+::-webkit-inner-spin-button { display: none; }
+
 /*Поле ввода*/
 .input-field {
 	width: 100%;
-	margin-top: 8px;
+	margin-top: 5px;
 
 	border: solid 2px #00BFFF;
 	border-radius: 5px;
@@ -270,8 +289,23 @@ section {
 	font-size: 14px;
 }
 
+.field-dob {
+	padding:  0.5em 1em 0.5em 2em;
+}
+
 .input {
 	width: 100%;
+	min-width: 215px;
+}
+
+.input:nth-child(even) {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.group-date-sex {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 
@@ -341,7 +375,7 @@ input[type="radio"]:checked + label span {
 .image-profile {
 	width: 135px;
 	height: 135px;
-	background-image: url("../img/imageProfule.png");
+	background-image: url("../img/Todarenco.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 50%;
@@ -351,6 +385,8 @@ input[type="radio"]:checked + label span {
 .image-update {
 	width: 100%;
 	margin-top: 25px;
+
+	text-decoration: none;
 }
 
 .group-date-sex {
@@ -361,6 +397,7 @@ input[type="radio"]:checked + label span {
 
 .group-check-sex {
 	margin-top: 15px;
+	margin-left: 25%;
 }
 
 .input-dob {
@@ -379,9 +416,6 @@ input[type="radio"]:checked + label span {
 	width: 45%;
 }
 
-.input-sex-text {
-	display: none;
-}
 
 .header-profile {
 	display: flex;
