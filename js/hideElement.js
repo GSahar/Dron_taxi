@@ -1,31 +1,44 @@
-function buttonSave() {
-    // Hide all elements with class="tabcontent" by default */
-    let i, tabcontent, tablinks;
+function buttonCancel() {
+  let i, contentAsterisk;
 
-    /*tabcontent = document.getElementsByClassName("button-edit");
-    tabcontent[i].style.display = "block";*/
+  //поле для вывода пола
+  document.getElementById("input-sex-text").style.display = "block";
+  //группа чекбоксов для определения пола
+  document.getElementById("group-check-sex").style.display = "none"; 
+  //кнопка редактирования
+  document.getElementById("button-edit").style.visibility = "visible";   
+  
 
-    
-    document.getElementById("button-edit").style.visibility = "visible";
-    document.getElementById("input-sex-text").style.display = "block";
-    document.getElementById("group-check-sex").style.display = "none";
+  //Элементы которые изначально скрыты
+  //кнопка обновитить фотографию
+  //поле подтверждения пароля
+  //группа кнопок сохранить/отмена
+  contentAsterisk = document.getElementsByClassName("hideElement");
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.visibility = "hidden";
+  }
 }
 
 /*функция вызываемая при нажатии кнопки редактирования */
 function buttonEdit() {
-    //кнопка редактирования
-    document.getElementById("button-edit").style.visibility = "hidden";
+    let i, contentAsterisk;
+
     //поле для вывода пола
     document.getElementById("input-sex-text").style.display = "none";
-
-
-    //кнопка обновитить фотографию
-    document.getElementById("image-update").style.visibility = "visible";  
     //группа чекбоксов для определения пола
-    document.getElementById("group-check-sex").style.display = "block";    
+    document.getElementById("group-check-sex").style.display = "block";  
+    //кнопка редактирования
+   document.getElementById("button-edit").style.visibility = "hidden";   
+
+    //Элементы которые изначально скрыты
+    //кнопка редактирования
+    //кнопка обновитить фотографию
+    //поле подтверждения пароля
     //группа кнопок сохранить/отмена
-    document.getElementById("group-button").style.visibility = "visible";
-    
+    contentAsterisk = document.getElementsByClassName("hideElement");
+    for (i = 0; i < contentAsterisk.length; i++) {
+      contentAsterisk[i].style.visibility = "visible";
+    }
 }
     //input-sex-text
     //group-check-sex
