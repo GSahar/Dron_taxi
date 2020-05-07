@@ -295,7 +295,7 @@ section {
 
 .input {
 	width: 100%;
-	min-width: 215px;
+	min-width: 115px;
 }
 
 .input:nth-child(even) {
@@ -308,6 +308,13 @@ section {
 	margin-bottom: 5px;
 }
 
+.hideElement {
+	visibility: hidden;
+}
+
+#group-check-sex {
+	display: none;
+}
 
 input[type="radio"] + label span {
     display:inline-block;
@@ -396,7 +403,7 @@ input[type="radio"]:checked + label span {
 }
 
 .group-check-sex {
-	margin-top: 15px;
+	margin-top: 10px;
 	margin-left: 25%;
 }
 
@@ -416,6 +423,9 @@ input[type="radio"]:checked + label span {
 	width: 45%;
 }
 
+.heder-input {
+	margin-bottom: 5px;
+}
 
 .header-profile {
 	display: flex;
