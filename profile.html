@@ -49,35 +49,35 @@
 
                         <div id="Profile" class="tabcontent">
                             <div class="header-profile">
-                                <button class="button blue-button button-edit" id="button-edit" onclick="buttonEdit()">Редактировать</button>
+                                <button class="button blue-button button-edit " id="button-edit" onclick="buttonEdit()">Редактировать</button>
                             </div>
                             <div class="content-profile">
                                 <div class="container-image">
                                     <div class="image-profile" id="dropBox"></div>
                                     <input type="file" name="file" id="file" class="inputfile"  onchange="processFiles(this.files)" />
-                                    <label class="button blue-button image-update" id="image-update" for="file" style="visibility: hidden;">Обновить</label>
+                                    <label class="button blue-button image-update hideElement" id="image-update" for="file">Обновить</label>
                                     
                                     
                                 </div>
                                 <form class="data-profile" id="data-prof" onsubmit="">
                                     <div class="profile-block1">
                                         <div class="input input-surname">
-                                            <label class="heder-input" for="surname">Фамилия*</label>
+                                            <label class="heder-input" for="surname">Фамилия<span class="asterisk hideElement">*</span></label>
                                             <input type="text" value="Тодаренко" class="input-field" id="surname" placeholder="Введите фамилию" required>
                                         </div>
     
                                         <div class="input input-name">
-                                            <label class="heder-input" for="name">Имя*</label>
+                                            <label class="heder-input" for="name">Имя<span class="asterisk hideElement">*</span></label>
                                             <input type="text" value="Регина" class="input-field" id="name" placeholder="Введите имя" required>
                                         </div>
     
                                         <div class="input input-patronymic">
-                                            <label class="heder-input" for="patronymic">Отчество*</label>
+                                            <label class="heder-input" for="patronymic">Отчество<span class="asterisk hideElement">*</span></label>
                                             <input type="text" value="Петровна" class="input-field" id="patronymic" placeholder="Введите отчество" required>
                                         </div>
                                         <div class="group-date-sex">
                                             <div class="input input-dob">
-                                                <label class="heder-input" for="dob">Дата рождения*</label>
+                                                <label class="heder-input" for="dob">Дата рождения<span class="asterisk hideElement">*</span></label>
                                                 <input type="date" value="1990-06-14" class="input-field field-dob" id="dob" placeholder="Введите дату" required>
                                             </div>
                                             <div class="content-sex">
@@ -86,7 +86,7 @@
                                                     <input type="text" value="Женский" class="input-field" id="sex-text">
                                                 </div>
     
-                                                <div class="group-check-sex" id="group-check-sex" style="display: none;">
+                                                <div class="group-check-sex hideElement" id="group-check-sex">
                                                     <div class="heder-input">Пол</div>
                                                     <input type="radio" id="r1" name="rr" />
                                                     <label for="r1"><span></span>м</label>
@@ -100,7 +100,7 @@
                                     
                                     <div class="profile-block2">
                                         <div class="input input-Email">
-                                            <label class="heder-input" for="email">Email*</label>
+                                            <label class="heder-input" for="email">Email<span class="asterisk hideElement">*</span></label>
                                             <input type="email" value="Todor" class="input-field" id="email" placeholder="Введите адрес почты" required>
                                         </div>
     
@@ -111,22 +111,22 @@
                                         </div>
     
                                         <div class="input input-password">
-                                            <label class="heder-input" for="pass">Пароль*</label>
+                                            <label class="heder-input" for="pass">Пароль<span class="asterisk hideElement">*</span></label>
                                             <input type="password" class="input-field" id="pass" placeholder="Введите пароль" required>
                                         </div>
     
-                                        <div class="input input-password">
-                                            <label class="heder-input" for="conf-pass">Подтвердить пароль*</label>
-                                            <input type="password" class="input-field" id="conf-pass" placeholder="Повторите пароль" required>
+                                        <div class="input input-password hideElement">
+                                            <label class="heder-input" for="conf-pass">Подтвердить пароль <span class="asterisk hideElement">*</span></label>
+                                            <input type="password" class="input-field"  placeholder="Повторите пароль" required>
                                         </div>
                                     </div>
                                     
                                 </form>
                             </div>
-                            <footer class="footer-profile" style="visibility: hidden;">
-                                <div class="group-button" id="group-button">
+                            <footer class="footer-profile">
+                                <div class="group-button hideElement" id="group-button">
                                     <button class="button green-button button-save" form="data-prof">Сохранить</button>
-                                    <button class="button blue-button button-cancel">Отмена</button>
+                                    <button class="button blue-button button-cancel" onclick="buttonCancel()">Отмена</button>
                                 </div>
                             </footer>
                         </div>
