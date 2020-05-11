@@ -118,7 +118,7 @@
                                         </div>
     
                                         <div class="input input-password hideElement">
-                                            <label class="heder-input" for="conf-pass">Подтвердить пароль <span class="asterisk hideElement">*</span></label>
+                                            <label class="heder-input" for="rpass">Подтвердить пароль <span class="asterisk hideElement">*</span></label>
                                             <input type="password" value="ewq31adsd3" class="input-field input-conf-pass" id="rpass"  placeholder="Повторите пароль" required>
                                             <div class="button-conf-open-eye" id="button-conf-open-eye" onclick="replaceType('button-conf-open-eye','button-conf-close-eye','input-conf-pass','password')"></div>
                                             <div class="button-conf-close-eye" id="button-conf-close-eye" onclick="replaceType('button-conf-close-eye','button-conf-open-eye','input-conf-pass','text')"></div>
@@ -135,7 +135,60 @@
                             </footer>
                         </div>
                         <div id="Role" class="tabcontent">
-                            <h3>Роли</h3>
+                            <div class="container-role">
+                                <section class="list-role">
+                                    <h3>Доступные роли</h3>
+                                    <div class="items-role">
+                                        <div class="item">
+                                            <span class="text-item">Бог</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="text-item">Администратор</span>   
+                                        </div>
+                                        <div class="item">
+                                            <span class="text-item">Пользователь</span> 
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="detail-role">
+                                    <h3>Роль: <span class="">Администратор</span></h3>
+                                    <div class="text-detail-role">                                        
+                                        <div class="input-role input-sys-name">
+                                            <label class="heder-input" for="sys-name">Системное имя<span class="asterisk hideElement">*</span></label>
+                                            <input type="text" value="Admin" class="input-field" id="sys-name" placeholder="Введите системное имя" required>
+                                        </div>
+    
+                                        <div class="input-role input-denomination">
+                                            <label class="heder-input" for="denomination">Наименование<span class="asterisk hideElement">*</span></label>
+                                            <input type="text" value="Администратор" class="input-field" id="denomination" placeholder="Введите наименование" required>
+                                        </div>
+                                    </div>
+                                    <div class="input input-start-date">
+                                        <label class="heder-input" for="dob">Дата начала<span class="asterisk hideElement">*</span></label>
+                                        <input type="date" value="2020-01-14" class="input-field field-dob" id="dob" placeholder="Введите дату" required>
+                                    </div>
+
+                                    <div class="input input-finish-date">
+                                        <label class="heder-input" for="dob">Дата окончания</label>
+                                        <input type="date" value="" class="input-field field-dob" id="dob" placeholder="Введите дату" required>
+                                    </div>
+                                    <div class="access-function">
+                                        <h3>Доступные функции</h3>
+                                        <div class="items-access-function">
+                                            <div class="item-function">
+                                                <span class="text-item">Управление пользователями</span>
+                                            </div>
+                                            <div class="item-function">
+                                                <span class="text-item">Управление ролями</span>
+                                            </div>
+                                            <div class="item-function">
+                                                <span class="text-item">Профиль</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
                         </div>                        
                     </section>
                 </div>
