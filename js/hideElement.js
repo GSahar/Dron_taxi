@@ -17,6 +17,31 @@ function buttonCancel() {
   for (i = 0; i < contentAsterisk.length; i++) {
     contentAsterisk[i].style.visibility = "hidden";
   }
+
+  let inputElem = document.getElementsByClassName("input-field");
+    for (i = 0; i < inputElem.length; i++) {
+      inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
+
+      //стиль input при просмотре
+      inputElem[i].style.border = 'solid 2px #800080';	
+      inputElem[i].style.borderBottom ='solid 2px #00BFFF';
+      inputElem[i].style.borderRadius ='0px';
+      inputElem[i].style.color ='#ffffff';
+      inputElem[i].style.backgroundColor ='#800080';
+    }
+
+    //включение видимости кнопки календаря
+  let element = document.getElementById('dob');
+  element.style['-webkit-calendar-picker-indicator'] = 'display: block;';
+
+  document.getElementById('surname').placeholder = "";
+  document.getElementById('name').placeholder = "";
+  document.getElementById('patronymic').placeholder = "";
+  document.getElementById('dob').placeholder = "";
+  document.getElementById('email').placeholder = "";
+  document.getElementById('telephon').placeholder = "";
+  document.getElementById('pass').placeholder = "";
+  document.getElementById('rpass').placeholder = "";
 }
 
 /*функция вызываемая при нажатии кнопки редактирования */
@@ -39,26 +64,46 @@ function buttonEdit() {
     for (i = 0; i < contentAsterisk.length; i++) {
       contentAsterisk[i].style.visibility = "visible";
     }
-}
-    //input-sex-text
-    //group-check-sex
 
-    /*for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "block";
-    }*/
-  
-    // Remove the background color of all tablinks/buttons
-   /* tablinks = document.getElementsByClassName("tablink-menu");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.backgroundColor = "";
+
+    let inputElem = document.getElementsByClassName("input-field");
+    for (i = 0; i < inputElem.length; i++) {
+      inputElem[i].removeAttribute('disabled');// сделать активной  
+           
+      //стиль для input при редактировании
+      inputElem[i].style.border = 'solid 2px #00BFFF';	
+      inputElem[i].style.borderBottom ='solid 2px #00BFFF';
+      inputElem[i].style.borderRadius ='5px';
+      inputElem[i].style.color ='#000000';
+      inputElem[i].style.backgroundColor ='#ffffff';
+
     }
+
+    document.getElementById('surname').placeholder = "Введите фамилию";
+    document.getElementById('name').placeholder = "Введите имя";
+    document.getElementById('patronymic').placeholder = "Введите отчество";
+    document.getElementById('dob').placeholder = "Введите дату";
+    document.getElementById('email').placeholder = "Введите адрес почты";
+    document.getElementById('telephon').placeholder = "Введите номер ( формат: 9 999-999-9999 )";
+    document.getElementById('pass').placeholder = "Введите пароль";
+    document.getElementById('rpass').placeholder = "Повторите пароль";
+
+    //отключение видимости кнопки календаря
+    let element = document.getElementById('dob');
+    element.style['-webkit-calendar-picker-indicator'] = 'display: none;';
+}
+
+function replaceType(idHide,idShow,element,type) {
+  let elementReplace = document.getElementsByClassName(element);
   
-    // Show the specific tab content
-    document.getElementById(pageName).style.display = "block";
-  
-    // Add the specific color to the button used to open the tab content
-    elmnt.style.backgroundColor = color;*/
-  //}
-  
-  // Get the element with id="defaultOpen" and click on it
-  /*document.getElementById("defaultOpenMenu").click();*/
+  document.getElementById(idHide).style.display = "none";
+  document.getElementById(idShow).style.display = "block";
+
+  for( let i = 0; i< elementReplace.length; i++ ) {
+    elementReplace[i].setAttribute('type', type); // сделать неактивной
+  }
+  //elementReplace[i].removeAttribute('type');// сделать активной 
+  //elementReplace.setAttribute('type', setType); // сделать неактивной
+
+
+}
