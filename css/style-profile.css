@@ -262,35 +262,28 @@ section {
 	flex-wrap: wrap;
 }
 
+.input-field {
+	width: 100%;
 
+	margin-top: 5px;
+
+	padding: 0.72em 2em;
+
+    font-size: 14px;
+  
+}
+
+::-webkit-inner-spin-button { display: none; }
 
 ::-webkit-calendar-picker-indicator {
+    display: block;
 	color: transparent;
 	opacity: 1;
 	margin-left: 5px;
 	background: url("../svg/calendar.svg") no-repeat center;
 	background-size: contain;
 	width: 17px;
-	height: 17px;
-}
-
-::-webkit-inner-spin-button { display: none; }
-
-/*Поле ввода*/
-.input-field {
-	width: 100%;
-	margin-top: 5px;
-
-	border: solid 2px #00BFFF;
-	border-radius: 5px;
-
-	padding: 0.72em 2em;
-
-	font-size: 14px;
-}
-
-.field-dob {
-	padding:  0.5em 1em 0.5em 2em;
+	height: 17px;	
 }
 
 .input {
@@ -302,6 +295,11 @@ section {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
+.field-dob {
+	padding:  0.5em 1em 0.5em 2em;
+}
+
 
 .group-date-sex {
 	margin-top: 5px;
@@ -346,7 +344,7 @@ input[type="radio"]:checked + label span {
 	padding: 0.72em 1em;
   
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: 700;
 	color: #ffffff;	  
 }
 
@@ -357,7 +355,7 @@ input[type="radio"]:checked + label span {
 .blue-button:hover {
 	color: #ffffffd9;
 	/*border: solid 2px #00BFFF;*/
-	background-color: rgb(0, 135, 180);
+	background-color: #0087b4;
 	/*box-shadow: #286820b3 0 80px 0px 2px inset;*/
 }
 
@@ -442,6 +440,53 @@ input[type="radio"]:checked + label span {
 	padding-bottom: 30px;
 }
 
+.button-edit-text {
+	margin-left: 30px;
+	font-weight: inherit;	
+}
+
+.button-edit {
+	background-image: url("../svg/edit.svg");
+	background-repeat: no-repeat;
+	background-size: 25px;
+	background-position: 10px 5px;
+	width: 170px;
+}
+
+.input-password {
+	position: relative;
+}
+
+.button-open-eye, .button-conf-open-eye {
+	width: 18px;
+	height: 14px;
+
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	margin-top: 38px;
+	margin-right: 20px;
+
+	background-image: url("../svg/open-eye.svg");
+	background-repeat: no-repeat;
+	display: none;
+}
+
+.button-close-eye, .button-conf-close-eye {
+	width: 18px;
+	height: 14px;
+
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	margin-top: 35px;
+	margin-right: 20px;
+
+	background-image: url("../svg/closed-eye.svg");
+	background-repeat: no-repeat;
+}
 
 .button-save {
 	width: 150px;
