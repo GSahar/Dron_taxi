@@ -102,8 +102,6 @@ function replaceType(idHide,idShow,element,type) {
   for( let i = 0; i< elementReplace.length; i++ ) {
     elementReplace[i].setAttribute('type', type); // сделать неактивной
   }
-  //elementReplace[i].removeAttribute('type');// сделать активной 
-  //elementReplace.setAttribute('type', setType); // сделать неактивной
 
 
 }
