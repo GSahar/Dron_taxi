@@ -49,7 +49,7 @@
 
                         <div id="Profile" class="tabcontent">
                             <div class="header-profile">
-                                <button class="button blue-button button-edit " id="button-edit" onclick="buttonEdit()">Редактировать</button>
+                                <button class="button blue-button button-edit " id="button-edit" onclick="buttonEdit()"><span class="button-edit-text">Редактировать</span></button>
                             </div>
                             <div class="content-profile">
                                 <div class="container-image">
@@ -101,7 +101,7 @@
                                     <div class="profile-block2">
                                         <div class="input input-Email">
                                             <label class="heder-input" for="email">Email<span class="asterisk hideElement">*</span></label>
-                                            <input type="email" value="Todor" class="input-field" id="email" placeholder="Введите адрес почты" required>
+                                            <input type="email" value="Todor@mail.ru" class="input-field" id="email" placeholder="Введите адрес почты" required>
                                         </div>
     
                                         <div class="input input-telephon">
@@ -112,12 +112,16 @@
     
                                         <div class="input input-password">
                                             <label class="heder-input" for="pass">Пароль<span class="asterisk hideElement">*</span></label>
-                                            <input type="password" class="input-field" id="pass" placeholder="Введите пароль" required>
+                                            <input type="password" value="ewq31adsd3" class="input-field input-pass" id="pass" placeholder="Введите пароль" required>
+                                            <div class="button-open-eye" id="button-open-eye" onclick="replaceType('button-open-eye','button-close-eye','input-pass','password')"></div>
+                                            <div class="button-close-eye" id="button-close-eye" onclick="replaceType('button-close-eye','button-open-eye','input-pass','text')"></div>
                                         </div>
     
                                         <div class="input input-password hideElement">
                                             <label class="heder-input" for="conf-pass">Подтвердить пароль <span class="asterisk hideElement">*</span></label>
-                                            <input type="password" class="input-field"  placeholder="Повторите пароль" required>
+                                            <input type="password" value="ewq31adsd3" class="input-field input-conf-pass" id="rpass"  placeholder="Повторите пароль" required>
+                                            <div class="button-conf-open-eye" id="button-conf-open-eye" onclick="replaceType('button-conf-open-eye','button-conf-close-eye','input-conf-pass','password')"></div>
+                                            <div class="button-conf-close-eye" id="button-conf-close-eye" onclick="replaceType('button-conf-close-eye','button-conf-open-eye','input-conf-pass','text')"></div>
                                         </div>
                                     </div>
                                     
