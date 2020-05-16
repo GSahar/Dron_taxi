@@ -338,7 +338,7 @@ input[type="radio"]:checked + label span {
 	text-align: center;
 	text-decoration: none;
 
-	border: solid 2px #ffffff;
+	border: 2px solid #ffffff;
 	border-radius: 5px;
 
 	padding: 0.72em 1em;
@@ -501,3 +501,135 @@ input[type="radio"]:checked + label span {
 	width: 120px;
 }
 /*#endregion*/
+
+.container-role {
+	width: 100%;
+	height: 95%;
+	display: flex;
+	margin-top: 10px;
+	position: relative;
+}
+.head-items-role,.head-detail-role,.head-access-function {
+	font-weight: 500;
+	font-size: 18px;
+	width: 94%;
+	margin-bottom: 20px;
+	
+}
+
+.items-role,.items-access-function {
+	border: 1px solid #ffffff;
+	
+	width: 100%;
+}
+
+.list-role {
+	width: 42%;	
+}
+
+.list-role::after {
+	content: "";
+	display:block; 
+	background-color: #973E95;
+	width: 3px;
+	height: 95%;
+
+	position: absolute;
+	top: 0;
+	left: 47%;
+}
+
+.item-role,.item-function {
+	width: 100%;	
+	background-color: #973E95;
+	padding: 0.9em 2.5em;
+	border: solid 2px #973E95;
+	color: #ffffff;
+	text-align: left;
+	position: relative;
+
+	font-size: 12px;
+	font-weight: 400;
+	font-family: inherit;
+}
+
+.input-field-role {
+	width: 100%;
+
+	margin-top: 5px;
+
+	padding: 0.72em 2em;
+
+    font-size: 14px;
+  
+}
+
+.field-date-role {
+	padding:  0.5em 1em 0.5em 2em;
+}
+
+.text-item {	
+	font-size: 12px;
+	font-weight: 400;
+	font-family: inherit;
+}
+
+.item-role:nth-child(even),.item-function:nth-child(even) {
+	background-color: #AD66A9;
+	border: solid 2px #AD66A9;
+}
+
+.item-role:hover {
+	border: solid 2px #00BFFF;
+}
+
+.tab-detail {
+	display: none;
+}
+
+.detail-role {
+	width: 46%;
+	margin-left: 11%;
+}
+
+.tab-detail,.text-detail-role { 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.group-block1,.group-block2 {
+	width: 45%;
+}
+
+.input-start-date,.input-finish-date {
+	width: 80%;
+}
+
+.access-function {
+	margin-top: 10%;
+	padding-bottom: 50px;
+}
+
+.button-item {
+	background-image: url("../svg/delete.svg");
+	width: 17px;
+	height: 20px;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+	margin: -2px 30px;
+}
+
+.button-item::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 24px;
+	background-color: #404040;
+	top: 0;
+	right: 50px;
+	margin-top: -2px;
+	position: absolute;
+}
+
