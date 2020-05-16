@@ -23,5 +23,6 @@ function openPage(pageName, elmnt, color) {
   document.getElementById("defaultOpen").click();
 
 
-  buttonCancel();
+  buttonCancel("input-field");
+  buttonCancel("input-field-role");
   

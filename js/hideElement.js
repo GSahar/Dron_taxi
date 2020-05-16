@@ -1,4 +1,4 @@
-function buttonCancel() {
+function buttonCancel(namefield) {
   let i, contentAsterisk;
 
   //поле для вывода пола
@@ -18,7 +18,7 @@ function buttonCancel() {
     contentAsterisk[i].style.visibility = "hidden";
   }
 
-  let inputElem = document.getElementsByClassName("input-field");
+  let inputElem = document.getElementsByClassName(namefield);
     for (i = 0; i < inputElem.length; i++) {
       inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
 
