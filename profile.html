@@ -22,15 +22,15 @@
                         
             <div class="container-menu">
                 <div class="items-menu"> 
-                    <button class="tablink-menu" onclick="openMenuPage('container-profile', this, '#7fff7f66') " id="defaultOpenMenu"><span class="button-text button-prof">Профиль</span></button>
-                    <button class="tablink-menu" onclick="openMenuPage('container-user', this, '#7fff7f66')" ><span class="button-text button-user">Упр. пользователями</span></button>
-                    <button class="tablink-menu" onclick="openMenuPage('container-role', this, '#7fff7f66')" ><span class="button-text button-role">Упр. ролями</span></button>
+                    <button class="tablink-menu" onclick="openMenuPage('container-profile','tabcontent-menu','tablink-menu', this, '#7fff7f66') " id="defaultOpenMenu"><span class="button-text button-prof">Профиль</span></button>
+                    <button class="tablink-menu" onclick="openMenuPage('container-user','tabcontent-menu','tablink-menu', this, '#7fff7f66')" ><span class="button-text button-user">Упр. пользователями</span></button>
+                    <button class="tablink-menu" onclick="openMenuPage('container-role','tabcontent-menu','tablink-menu', this, '#7fff7f66')" ><span class="button-text button-role">Упр. ролями</span></button>
                 </div>
             </div>
 
             <footer class="footer-menu">
                 <div class="items-menu"> 
-                    <button class="tablink-menu" onclick="openMenuPage('container-exit', this, '#7fff7f66')" ><span class="button-text button-exit">Выход</span></button>
+                    <button class="tablink-menu" onclick="openMenuPage('container-exit','tabcontent-menu','tablink-menu', this, '#7fff7f66')" ><span class="button-text button-exit">Выход</span></button>
                 </div>
             </footer>   
         </section>
@@ -130,59 +130,146 @@
                             <footer class="footer-profile">
                                 <div class="group-button hideElement" id="group-button">
                                     <button class="button green-button button-save" form="data-prof">Сохранить</button>
-                                    <button class="button blue-button button-cancel" onclick="buttonCancel()">Отмена</button>
+                                    <button class="button blue-button button-cancel" onclick="buttonCancel('input-field')">Отмена</button>
                                 </div>
                             </footer>
                         </div>
                         <div id="Role" class="tabcontent">
                             <div class="container-role">
                                 <section class="list-role">
-                                    <h3>Доступные роли</h3>
-                                    <div class="items-role">
-                                        <div class="item">
-                                            <span class="text-item">Бог</span>
-                                        </div>
-                                        <div class="item">
-                                            <span class="text-item">Администратор</span>   
-                                        </div>
-                                        <div class="item">
-                                            <span class="text-item">Пользователь</span> 
-                                        </div>
+                                    <h3 class="head-items-role">Доступные роли</h3>
+                                    <div class="items-role">                                        
+                                        <button class="item-role" onclick="openMenuPage('detail-god','tab-detail','item-role', this, '#800080')" id="defaultOpenRole">
+                                            <span class="text-item">Бог</span><span class="button-item"></span>
+                                        </button>
+                                        <button class="item-role" onclick="openMenuPage('detail-admin','tab-detail','item-role', this, '#800080')">
+                                            <span class="text-item">Администратор</span><span class="button-item"></span>   
+                                        </button>
+                                        <button class="item-role" onclick="openMenuPage('detail-user','tab-detail','item-role', this, '#800080')">
+                                            <span class="text-item">Пользователь</span><span class="button-item"></span> 
+                                        </button>
                                     </div>
                                 </section>
                                 <section class="detail-role">
-                                    <h3>Роль: <span class="">Администратор</span></h3>
-                                    <div class="text-detail-role">                                        
-                                        <div class="input-role input-sys-name">
-                                            <label class="heder-input" for="sys-name">Системное имя<span class="asterisk hideElement">*</span></label>
-                                            <input type="text" value="Admin" class="input-field" id="sys-name" placeholder="Введите системное имя" required>
-                                        </div>
-    
-                                        <div class="input-role input-denomination">
-                                            <label class="heder-input" for="denomination">Наименование<span class="asterisk hideElement">*</span></label>
-                                            <input type="text" value="Администратор" class="input-field" id="denomination" placeholder="Введите наименование" required>
-                                        </div>
-                                    </div>
-                                    <div class="input input-start-date">
-                                        <label class="heder-input" for="dob">Дата начала<span class="asterisk hideElement">*</span></label>
-                                        <input type="date" value="2020-01-14" class="input-field field-dob" id="dob" placeholder="Введите дату" required>
-                                    </div>
+                                    <div class="tab-detail" id="detail-god">
+                                        <h3 class="head-detail-role">Роль: Бог</h3>
+                                        <div class="text-detail-role">      
+                                            <div class="group-block1">                                
+                                                <div class="input-role input-sys-name">
+                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <input type="text" value="God" class="input-field-role" id="sys-name" placeholder="Введите системное имя" required>
+                                                </div>
 
-                                    <div class="input input-finish-date">
-                                        <label class="heder-input" for="dob">Дата окончания</label>
-                                        <input type="date" value="" class="input-field field-dob" id="dob" placeholder="Введите дату" required>
+                                                <div class="input input-start-date">
+                                                    <label class="heder-input" for="start-date">Дата начала</label>
+                                                    <input type="date" value="2019-01-14" class="input-field-role field-date-role" id="start-date" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>  
+                                            <div  class="group-block2">                                            
+                                                <div class="input-role input-denomination">
+                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <input type="text" value="Бог" class="input-field-role" id="denomination" placeholder="Введите наименование" required>
+                                                </div>                                           
+        
+                                                <div class="input input-finish-date">
+                                                    <label class="heder-input" for="end-date">Дата окончания</label>
+                                                    <input type="date" value="" class="input-field-role field-date-role" id="end-date" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                       
+                                        <div class="access-function">
+                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="items-access-function">
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление пользователями</span><span class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление ролями</span><span class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Профиль</span><span class="button-item"></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="access-function">
-                                        <h3>Доступные функции</h3>
-                                        <div class="items-access-function">
-                                            <div class="item-function">
-                                                <span class="text-item">Управление пользователями</span>
+                                    <div class="tab-detail" id="detail-admin">
+                                        <h3 class="head-detail-role">Роль: Администратор</h3>
+                                        <div class="text-detail-role">                                        
+                                            <div class="group-block1">                                
+                                                <div class="input-role input-sys-name">
+                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <input type="text" value="Admin" class="input-field-role" id="sys-name" placeholder="Введите системное имя" required>
+                                                </div>
+
+                                                <div class="input input-start-date">
+                                                    <label class="heder-input" for="start-date2">Дата начала</label>
+                                                    <input type="date" value="2020-01-14" class="input-field-role field-date-role" id="start-date2" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>  
+                                            <div  class="group-block2">                                            
+                                                <div class="input-role input-denomination">
+                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <input type="text" value="Администратор" class="input-field-role" id="denomination" placeholder="Введите наименование" required>
+                                                </div>                                           
+        
+                                                <div class="input input-finish-date">
+                                                    <label class="heder-input" for="end-date2">Дата окончания</label>
+                                                    <input type="date" value="" class="input-field-role field-date-role" id="end-date2" placeholder="Введите дату" required>
+                                                </div>
                                             </div>
-                                            <div class="item-function">
-                                                <span class="text-item">Управление ролями</span>
+                                        </div>
+                                       
+                                        <div class="access-function">
+                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="items-access-function">
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление пользователями</span><span class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление ролями</span><span class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Профиль</span><span class="button-item"></span>
+                                                </div>
                                             </div>
-                                            <div class="item-function">
-                                                <span class="text-item">Профиль</span>
+                                        </div>
+                                    </div>
+                                    <div class="tab-detail" id="detail-user">
+                                        <h3 class="head-detail-role">Роль: Пользователь</h3>
+                                        <div class="text-detail-role">                                        
+                                            <div class="group-block1">                                
+                                                <div class="input-role input-sys-name">
+                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <input type="text" value="User" class="input-field-role" id="sys-name" placeholder="Введите системное имя" required>
+                                                </div>
+
+                                                <div class="input input-start-date">
+                                                    <label class="heder-input" for="start-date3">Дата начала</label>
+                                                    <input type="date" value="2018-01-14" class="input-field-role field-date-role" id="start-date3" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>  
+                                            <div  class="group-block2">                                            
+                                                <div class="input-role input-denomination">
+                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <input type="text" value="Пользователь" class="input-field-role" id="denomination" placeholder="Введите наименование" required>
+                                                </div>                                           
+        
+                                                <div class="input input-finish-date">
+                                                    <label class="heder-input" for="end-date3">Дата окончания</label>
+                                                    <input type="date" value="" class="input-field-role field-date-role" id="end-date3" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="access-function">
+                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="items-access-function">
+                                                
+                                                <div class="item-function">
+                                                    <span class="text-item">Профиль</span><span class="button-item"></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -196,12 +283,59 @@
                 <div class="container-user tabcontent-menu" id="container-user">
                     <h2 class="head-contant">Управление пользователями</h2>
                     <section class="contant">
-                        <footer class="footer-profile">
-                            <div class="group-button">
-                                <button class="button green-button button-save">Сохранить</button>
-                                <button class="button blue-button button-cancel">Отмена</button>
+                        <div>
+                            <div class="search-panel">
+                                <div class="input-role input-sys-name">
+                                    <input type="text" value="" class="input-search" id="sys-name" placeholder="Фамилия" required>
+                                </div>
+                                <div class="input-role input-sys-name">
+                                    <input type="text" value="" class="input-search" id="sys-name" placeholder="Дата рождения" required>
+                                </div>
+                                <button class="button blue-button button-add" >Добавить</button>
                             </div>
-                        </footer>
+                            <div class="contant-table">
+                                <div class="head-table">
+
+                                </div>
+                                <div class="table-items">
+                                    <div class="item-table">
+                                        <div class="logo-item-table">
+
+                                        </div>
+                                        <div class="item-table FIO-item-table">
+                                            Сахаров Андрей Геннадьевич
+                                        </div>
+                                        <div class="item-table dob-item-table">
+                                            23.10.1990
+                                        </div>
+                                        <div class="item-table email-item-table">
+                                            andrey-saxarov@mail.ru
+                                        </div>
+                                        <div class="item-table dle-item-table">
+                                            14.05.2020
+                                        </div>
+                                        <div class="item-table session-item-table">
+                                            12da4rcd2321
+                                        </div>
+                                        <div class="item-table group-button-item-table">
+                                            <div class="del-item">
+
+                                            </div>
+                                            <div class="edit-item">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-numerator">
+                                <div class="numer"> 1</div>
+                                <div class="numer">2</div>
+                                <div class="numer">3</div>...
+                                <div class="numer">20</div>
+
+                            </div>
+                        </div>
                     </section>
                 </div>
 
