@@ -22,6 +22,9 @@ function openMenuPage(pageName,nametabcontent,namemenu, elmnt, color) {
     if(namemenu === 'item-role') {
       elmnt.style.border = 'solid 2px #800080';	
     }
+    if(namemenu === 'numer') {
+      elmnt.style.border = 'solid 1px #ffffff';	
+    }
     //
       //tablinks[i].style.borderBottom ='solid 2px #00BFFF';
   }
@@ -29,3 +32,4 @@ function openMenuPage(pageName,nametabcontent,namemenu, elmnt, color) {
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpenMenu").click();
   document.getElementById("defaultOpenRole").click();
+  document.getElementById("defaultOpenItemTable").click();
