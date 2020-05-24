@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,128 +10,168 @@
     <script src="js/loadFile.js"></script>
     <script src="js/hideElement.js"></script>
 </head>
+
 <body>
-    <div class="container">    
-       
-        <section class="left-menu">   
+    <div class="container">
+
+        <section class="left-menu">
             <header class="header">
                 <div class="contain-logo">
                     <img class="logo" src="svg/Logo_Dron_Taxi.svg" alt="логотип">
                     <h2 class="logo-text"> dron taxi</h2>
-                </div>  
+                </div>
             </header>
-                        
+
             <div class="container-menu">
-                <div class="items-menu"> 
-                    <button class="tablink-menu" onclick="openMenuPage('container-profile','tabcontent-menu','tablink-menu', this, '#7fff7f66') " id="defaultOpenMenu"><span class="button-text button-prof">Профиль</span></button>
-                    <button class="tablink-menu" onclick="openMenuPage('container-user','tabcontent-menu','tablink-menu', this, '#7fff7f66')" ><span class="button-text button-user">Упр. пользователями</span></button>
-                    <button class="tablink-menu" onclick="openMenuPage('container-role','tabcontent-menu','tablink-menu', this, '#7fff7f66')" ><span class="button-text button-role">Упр. ролями</span></button>
+                <div class="items-menu">
+                    <button class="tablink-menu"
+                        onclick="openMenuPage('container-profile','tabcontent-menu','tablink-menu', this, '#7fff7f66') "
+                        id="defaultOpenMenu"><span class="button-text button-prof">Профиль</span></button>
+                    <button class="tablink-menu"
+                        onclick="openMenuPage('container-user','tabcontent-menu','tablink-menu', this, '#7fff7f66')"><span
+                            class="button-text button-user">Упр. пользователями</span></button>
+                    <button class="tablink-menu"
+                        onclick="openMenuPage('container-role','tabcontent-menu','tablink-menu', this, '#7fff7f66')"><span
+                            class="button-text button-role">Упр. ролями</span></button>
                 </div>
             </div>
 
             <footer class="footer-menu">
-                <div class="items-menu"> 
-                    <button class="tablink-menu" onclick="openMenuPage('container-exit','tabcontent-menu','tablink-menu', this, '#7fff7f66')" ><span class="button-text button-exit">Выход</span></button>
+                <div class="items-menu">
+                    <button class="tablink-menu"
+                        onclick="openMenuPage('container-exit','tabcontent-menu','tablink-menu', this, '#7fff7f66')"><span
+                            class="button-text button-exit">Выход</span></button>
                 </div>
-            </footer>   
+            </footer>
         </section>
         <div class="main-contant">
             <section class="head-menu">
 
             </section>
-           
-        
-            <div class="container-contant" > 
+
+
+            <div class="container-contant">
                 <div class="container-profile tabcontent-menu" id="container-profile">
                     <h2 class="head-contant">Мой профиль</h2>
                     <section class="contant">
-                        <button class="tablink" onclick="openPage('Profile', this, '#800080') " id="defaultOpen">Личные данные</button>
-                        <button class="tablink" onclick="openPage('Role', this, '#800080')" >Роли</button>
+                        <button class="tablink" onclick="openPage('Profile', this, '#800080') " id="defaultOpen">Личные
+                            данные</button>
+                        <button class="tablink" onclick="openPage('Role', this, '#800080')">Роли</button>
 
                         <div id="Profile" class="tabcontent">
                             <div class="header-profile">
-                                <button class="button blue-button button-edit " id="button-edit" onclick="buttonEdit()"><span class="button-edit-text">Редактировать</span></button>
+                                <button class="button blue-button button-edit " id="button-edit"
+                                    onclick="buttonEdit()"><span class="button-edit-text">Редактировать</span></button>
                             </div>
                             <div class="content-profile">
                                 <div class="container-image">
                                     <div class="image-profile" id="dropBox"></div>
-                                    <input type="file" name="file" id="file" class="inputfile"  onchange="processFiles(this.files)" />
-                                    <label class="button blue-button image-update hideElement" id="image-update" for="file">Обновить</label>
-                                    
-                                    
+                                    <input type="file" name="file" id="file" class="inputfile"
+                                        onchange="processFiles(this.files)" />
+                                    <label class="button blue-button image-update hideElement" id="image-update"
+                                        for="file">Обновить</label>
+
+
                                 </div>
                                 <form class="data-profile" id="data-prof" onsubmit="">
                                     <div class="profile-block1">
                                         <div class="input input-surname">
-                                            <label class="heder-input" for="surname">Фамилия<span class="asterisk hideElement">*</span></label>
-                                            <input type="text" value="Тодаренко" class="input-field" id="surname" placeholder="Введите фамилию" required>
+                                            <label class="heder-input" for="surname">Фамилия<span
+                                                    class="asterisk hideElement">*</span></label>
+                                            <input type="text" value="Тодаренко" class="input-field" id="surname"
+                                                placeholder="Введите фамилию" required>
                                         </div>
-    
+
                                         <div class="input input-name">
-                                            <label class="heder-input" for="name">Имя<span class="asterisk hideElement">*</span></label>
-                                            <input type="text" value="Регина" class="input-field" id="name" placeholder="Введите имя" required>
+                                            <label class="heder-input" for="name">Имя<span
+                                                    class="asterisk hideElement">*</span></label>
+                                            <input type="text" value="Регина" class="input-field" id="name"
+                                                placeholder="Введите имя" required>
                                         </div>
-    
+
                                         <div class="input input-patronymic">
-                                            <label class="heder-input" for="patronymic">Отчество<span class="asterisk hideElement">*</span></label>
-                                            <input type="text" value="Петровна" class="input-field" id="patronymic" placeholder="Введите отчество" required>
+                                            <label class="heder-input" for="patronymic">Отчество<span
+                                                    class="asterisk hideElement">*</span></label>
+                                            <input type="text" value="Петровна" class="input-field" id="patronymic"
+                                                placeholder="Введите отчество" required>
                                         </div>
                                         <div class="group-date-sex">
                                             <div class="input input-dob">
-                                                <label class="heder-input" for="dob">Дата рождения<span class="asterisk hideElement">*</span></label>
-                                                <input type="date" value="1990-06-14" class="input-field field-dob" id="dob" placeholder="Введите дату" required>
+                                                <label class="heder-input" for="dob">Дата рождения<span
+                                                        class="asterisk hideElement">*</span></label>
+                                                <input type="date" value="1990-06-14" class="input-field field-dob"
+                                                    id="dob" placeholder="Введите дату" required>
                                             </div>
                                             <div class="content-sex">
                                                 <div class="input input-sex-text" id="input-sex-text">
                                                     <label class="heder-input" for="sex-text">Пол</label>
-                                                    <input type="text" value="Женский" class="input-field" id="sex-text">
+                                                    <input type="text" value="Женский" class="input-field"
+                                                        id="sex-text">
                                                 </div>
-    
+
                                                 <div class="group-check-sex hideElement" id="group-check-sex">
                                                     <div class="heder-input">Пол</div>
                                                     <input type="radio" id="r1" name="rr" />
                                                     <label for="r1"><span></span>м</label>
-                                                
+
                                                     <input type="radio" checked="checked" id="r2" name="rr" />
-                                                    <label for="r2"><span></span>ж</label>     
-                                                </div>                                            
-                                            </div>                                       
+                                                    <label for="r2"><span></span>ж</label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="profile-block2">
                                         <div class="input input-Email">
-                                            <label class="heder-input" for="email">Email<span class="asterisk hideElement">*</span></label>
-                                            <input type="email" value="Todor@mail.ru" class="input-field" id="email" placeholder="Введите адрес почты" required>
+                                            <label class="heder-input" for="email">Email<span
+                                                    class="asterisk hideElement">*</span></label>
+                                            <input type="email" value="Todor@mail.ru" class="input-field" id="email"
+                                                placeholder="Введите адрес почты" required>
                                         </div>
-    
+
                                         <div class="input input-telephon">
                                             <label class="heder-input" for="telephon">Телефон</label>
-                                            <input type="tel" pattern="[1-9]{1} [0-9]{3}-[0-9]{3}-[0-9]{4}" class="input-field" id="telephon" placeholder="Введите номер ( формат: 9 999-999-9999 )">
-                                            
+                                            <input type="tel" pattern="[1-9]{1} [0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                class="input-field" id="telephon"
+                                                placeholder="Введите номер ( формат: 9 999-999-9999 )">
+
                                         </div>
-    
+
                                         <div class="input input-password">
-                                            <label class="heder-input" for="pass">Пароль<span class="asterisk hideElement">*</span></label>
-                                            <input type="password" value="ewq31adsd3" class="input-field input-pass" id="pass" placeholder="Введите пароль" required>
-                                            <div class="button-open-eye" id="button-open-eye" onclick="replaceType('button-open-eye','button-close-eye','input-pass','password')"></div>
-                                            <div class="button-close-eye" id="button-close-eye" onclick="replaceType('button-close-eye','button-open-eye','input-pass','text')"></div>
+                                            <label class="heder-input" for="pass">Пароль<span
+                                                    class="asterisk hideElement">*</span></label>
+                                            <input type="password" value="ewq31adsd3" class="input-field input-pass"
+                                                id="pass" placeholder="Введите пароль" required>
+                                            <div class="button-open-eye" id="button-open-eye"
+                                                onclick="replaceType('button-open-eye','button-close-eye','input-pass','password')">
+                                            </div>
+                                            <div class="button-close-eye" id="button-close-eye"
+                                                onclick="replaceType('button-close-eye','button-open-eye','input-pass','text')">
+                                            </div>
                                         </div>
-    
+
                                         <div class="input input-password hideElement">
-                                            <label class="heder-input" for="rpass">Подтвердить пароль <span class="asterisk hideElement">*</span></label>
-                                            <input type="password" value="ewq31adsd3" class="input-field input-conf-pass" id="rpass"  placeholder="Повторите пароль" required>
-                                            <div class="button-conf-open-eye" id="button-conf-open-eye" onclick="replaceType('button-conf-open-eye','button-conf-close-eye','input-conf-pass','password')"></div>
-                                            <div class="button-conf-close-eye" id="button-conf-close-eye" onclick="replaceType('button-conf-close-eye','button-conf-open-eye','input-conf-pass','text')"></div>
+                                            <label class="heder-input" for="rpass">Подтвердить пароль <span
+                                                    class="asterisk hideElement">*</span></label>
+                                            <input type="password" value="ewq31adsd3"
+                                                class="input-field input-conf-pass" id="rpass"
+                                                placeholder="Повторите пароль" required>
+                                            <div class="button-conf-open-eye" id="button-conf-open-eye"
+                                                onclick="replaceType('button-conf-open-eye','button-conf-close-eye','input-conf-pass','password')">
+                                            </div>
+                                            <div class="button-conf-close-eye" id="button-conf-close-eye"
+                                                onclick="replaceType('button-conf-close-eye','button-conf-open-eye','input-conf-pass','text')">
+                                            </div>
                                         </div>
                                     </div>
-                                    
+
                                 </form>
                             </div>
                             <footer class="footer-profile">
                                 <div class="group-button hideElement" id="group-button">
                                     <button class="button green-button button-save" form="data-prof">Сохранить</button>
-                                    <button class="button blue-button button-cancel" onclick="buttonCancel('input-field')">Отмена</button>
+                                    <button class="button blue-button button-cancel"
+                                        onclick="buttonCancel('input-field')">Отмена</button>
                                 </div>
                             </footer>
                         </div>
@@ -138,137 +179,164 @@
                             <div class="container-role">
                                 <section class="list-role">
                                     <h3 class="head-items-role">Доступные роли</h3>
-                                    <div class="items-role">                                        
-                                        <button class="item-role" onclick="openMenuPage('detail-god','tab-detail','item-role', this, '#800080')" id="defaultOpenRole">
+                                    <div class="items-role">
+                                        <button class="item-role"
+                                            onclick="openMenuPage('detail-god','tab-detail','item-role', this, '#800080')"
+                                            id="defaultOpenRole">
                                             <span class="text-item">Бог</span><span class="button-item"></span>
                                         </button>
-                                        <button class="item-role" onclick="openMenuPage('detail-admin','tab-detail','item-role', this, '#800080')">
-                                            <span class="text-item">Администратор</span><span class="button-item"></span>   
+                                        <button class="item-role"
+                                            onclick="openMenuPage('detail-admin','tab-detail','item-role', this, '#800080')">
+                                            <span class="text-item">Администратор</span><span
+                                                class="button-item"></span>
                                         </button>
-                                        <button class="item-role" onclick="openMenuPage('detail-user','tab-detail','item-role', this, '#800080')">
-                                            <span class="text-item">Пользователь</span><span class="button-item"></span> 
+                                        <button class="item-role"
+                                            onclick="openMenuPage('detail-user','tab-detail','item-role', this, '#800080')">
+                                            <span class="text-item">Пользователь</span><span class="button-item"></span>
                                         </button>
                                     </div>
                                 </section>
                                 <section class="detail-role">
                                     <div class="tab-detail" id="detail-god">
                                         <h3 class="head-detail-role">Роль: Бог</h3>
-                                        <div class="text-detail-role">      
-                                            <div class="group-block1">                                
+                                        <div class="text-detail-role">
+                                            <div class="group-block1">
                                                 <div class="input-role input-sys-name">
                                                     <label class="heder-input" for="sys-name">Системное имя</label>
-                                                    <input type="text" value="God" class="input-field-role" id="sys-name" placeholder="Введите системное имя" required>
+                                                    <input type="text" value="God" class="input-field-role"
+                                                        id="sys-name" placeholder="Введите системное имя" required>
                                                 </div>
 
                                                 <div class="input input-start-date">
                                                     <label class="heder-input" for="start-date">Дата начала</label>
-                                                    <input type="date" value="2019-01-14" class="input-field-role field-date-role" id="start-date" placeholder="Введите дату" required>
+                                                    <input type="date" value="2019-01-14"
+                                                        class="input-field-role field-date-role" id="start-date"
+                                                        placeholder="Введите дату" required>
                                                 </div>
-                                            </div>  
-                                            <div  class="group-block2">                                            
+                                            </div>
+                                            <div class="group-block2">
                                                 <div class="input-role input-denomination">
                                                     <label class="heder-input" for="denomination">Наименование</label>
-                                                    <input type="text" value="Бог" class="input-field-role" id="denomination" placeholder="Введите наименование" required>
-                                                </div>                                           
-        
+                                                    <input type="text" value="Бог" class="input-field-role"
+                                                        id="denomination" placeholder="Введите наименование" required>
+                                                </div>
+
                                                 <div class="input input-finish-date">
                                                     <label class="heder-input" for="end-date">Дата окончания</label>
-                                                    <input type="date" value="" class="input-field-role field-date-role" id="end-date" placeholder="Введите дату" required>
+                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                        id="end-date" placeholder="Введите дату" required>
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                       
+
+
                                         <div class="access-function">
                                             <h3 class="head-access-function">Доступные функции</h3>
                                             <div class="items-access-function">
                                                 <div class="item-function">
-                                                    <span class="text-item">Управление пользователями</span><span class="button-item"></span>
+                                                    <span class="text-item">Управление пользователями</span><span
+                                                        class="button-item"></span>
                                                 </div>
                                                 <div class="item-function">
-                                                    <span class="text-item">Управление ролями</span><span class="button-item"></span>
+                                                    <span class="text-item">Управление ролями</span><span
+                                                        class="button-item"></span>
                                                 </div>
                                                 <div class="item-function">
-                                                    <span class="text-item">Профиль</span><span class="button-item"></span>
+                                                    <span class="text-item">Профиль</span><span
+                                                        class="button-item"></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tab-detail" id="detail-admin">
                                         <h3 class="head-detail-role">Роль: Администратор</h3>
-                                        <div class="text-detail-role">                                        
-                                            <div class="group-block1">                                
+                                        <div class="text-detail-role">
+                                            <div class="group-block1">
                                                 <div class="input-role input-sys-name">
                                                     <label class="heder-input" for="sys-name">Системное имя</label>
-                                                    <input type="text" value="Admin" class="input-field-role" id="sys-name" placeholder="Введите системное имя" required>
+                                                    <input type="text" value="Admin" class="input-field-role"
+                                                        id="sys-name" placeholder="Введите системное имя" required>
                                                 </div>
 
                                                 <div class="input input-start-date">
                                                     <label class="heder-input" for="start-date2">Дата начала</label>
-                                                    <input type="date" value="2020-01-14" class="input-field-role field-date-role" id="start-date2" placeholder="Введите дату" required>
+                                                    <input type="date" value="2020-01-14"
+                                                        class="input-field-role field-date-role" id="start-date2"
+                                                        placeholder="Введите дату" required>
                                                 </div>
-                                            </div>  
-                                            <div  class="group-block2">                                            
+                                            </div>
+                                            <div class="group-block2">
                                                 <div class="input-role input-denomination">
                                                     <label class="heder-input" for="denomination">Наименование</label>
-                                                    <input type="text" value="Администратор" class="input-field-role" id="denomination" placeholder="Введите наименование" required>
-                                                </div>                                           
-        
+                                                    <input type="text" value="Администратор" class="input-field-role"
+                                                        id="denomination" placeholder="Введите наименование" required>
+                                                </div>
+
                                                 <div class="input input-finish-date">
                                                     <label class="heder-input" for="end-date2">Дата окончания</label>
-                                                    <input type="date" value="" class="input-field-role field-date-role" id="end-date2" placeholder="Введите дату" required>
+                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                        id="end-date2" placeholder="Введите дату" required>
                                                 </div>
                                             </div>
                                         </div>
-                                       
+
                                         <div class="access-function">
                                             <h3 class="head-access-function">Доступные функции</h3>
                                             <div class="items-access-function">
                                                 <div class="item-function">
-                                                    <span class="text-item">Управление пользователями</span><span class="button-item"></span>
+                                                    <span class="text-item">Управление пользователями</span><span
+                                                        class="button-item"></span>
                                                 </div>
                                                 <div class="item-function">
-                                                    <span class="text-item">Управление ролями</span><span class="button-item"></span>
+                                                    <span class="text-item">Управление ролями</span><span
+                                                        class="button-item"></span>
                                                 </div>
                                                 <div class="item-function">
-                                                    <span class="text-item">Профиль</span><span class="button-item"></span>
+                                                    <span class="text-item">Профиль</span><span
+                                                        class="button-item"></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tab-detail" id="detail-user">
                                         <h3 class="head-detail-role">Роль: Пользователь</h3>
-                                        <div class="text-detail-role">                                        
-                                            <div class="group-block1">                                
+                                        <div class="text-detail-role">
+                                            <div class="group-block1">
                                                 <div class="input-role input-sys-name">
                                                     <label class="heder-input" for="sys-name">Системное имя</label>
-                                                    <input type="text" value="User" class="input-field-role" id="sys-name" placeholder="Введите системное имя" required>
+                                                    <input type="text" value="User" class="input-field-role"
+                                                        id="sys-name" placeholder="Введите системное имя" required>
                                                 </div>
 
                                                 <div class="input input-start-date">
                                                     <label class="heder-input" for="start-date3">Дата начала</label>
-                                                    <input type="date" value="2018-01-14" class="input-field-role field-date-role" id="start-date3" placeholder="Введите дату" required>
+                                                    <input type="date" value="2018-01-14"
+                                                        class="input-field-role field-date-role" id="start-date3"
+                                                        placeholder="Введите дату" required>
                                                 </div>
-                                            </div>  
-                                            <div  class="group-block2">                                            
+                                            </div>
+                                            <div class="group-block2">
                                                 <div class="input-role input-denomination">
                                                     <label class="heder-input" for="denomination">Наименование</label>
-                                                    <input type="text" value="Пользователь" class="input-field-role" id="denomination" placeholder="Введите наименование" required>
-                                                </div>                                           
-        
+                                                    <input type="text" value="Пользователь" class="input-field-role"
+                                                        id="denomination" placeholder="Введите наименование" required>
+                                                </div>
+
                                                 <div class="input input-finish-date">
                                                     <label class="heder-input" for="end-date3">Дата окончания</label>
-                                                    <input type="date" value="" class="input-field-role field-date-role" id="end-date3" placeholder="Введите дату" required>
+                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                        id="end-date3" placeholder="Введите дату" required>
                                                 </div>
                                             </div>
                                         </div>
-                                       
+
                                         <div class="access-function">
                                             <h3 class="head-access-function">Доступные функции</h3>
                                             <div class="items-access-function">
-                                                
+
                                                 <div class="item-function">
-                                                    <span class="text-item">Профиль</span><span class="button-item"></span>
+                                                    <span class="text-item">Профиль</span><span
+                                                        class="button-item"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -276,48 +344,180 @@
                                 </section>
 
                             </div>
-                        </div>                        
+                        </div>
                     </section>
                 </div>
 
                 <div class="container-user tabcontent-menu" id="container-user">
                     <h2 class="head-contant">Управление пользователями</h2>
-                    <section class="contant">
+                    <section class="contant-user">
                         <div>
                             <div class="search-panel">
-                                <div class="input-role input-sys-name">
-                                    <input type="text" value="" class="input-search" id="sys-name" placeholder="Фамилия" required>
+                                <div class="group-input-search">
+                                    <input type="text" value="" class="input-search searsh-surname"
+                                        placeholder="Фамилия">
+
+                                    <input type="text" value="" class="input-search search-dob"
+                                        placeholder="Дата рождения">
                                 </div>
-                                <div class="input-role input-sys-name">
-                                    <input type="text" value="" class="input-search" id="sys-name" placeholder="Дата рождения" required>
-                                </div>
-                                <button class="button blue-button button-add" >Добавить</button>
+                                <button class="button blue-button button-add"> <span class="button-edit-text">Добавить</span> </button>
+                            </div>
+                            <div class="head-table">
+                                <div class="item-head img-header">Фото</div>
+                                <div class="item-head FIO-header">Фамилия Имя Отчество</div>
+                                <div class="item-head dob-header">Дата рождения</div>
+                                <div class="item-head email-header">Электронная почта</div>
+                                <div class="item-head dle-header">Дата последнеого </div>
+                                <div class="item-head session-header">Текущая сессия</div>
                             </div>
                             <div class="contant-table">
-                                <div class="head-table">
+                                <div class="page-contant-table" id="page-table-1">
+                                    <div class="table-items" id="items-1" onclick="changeBg('items-1', 'table-items')">
+                                        <div class="container-img">
+                                            <div class="item-value logo-item-value">
+                                                <span class="text-item"></span>
+                                            </div>
+                                        </div>
+                                        <div class="item-value FIO-item-value">
+                                            <span class="text-item">Тодаренко Регина Петровна</span>
+                                        </div>
+                                        <div class="item-value dob-item-value">
+                                            <span class="text-item">14.06.1990</span>
+                                        </div>
+                                        <div class="item-value email-item-value">
+                                            <span class="text-item">Todar@mail.ru</span>
+                                        </div>
+                                        <div class="item-value dle-item-value">
+                                            <span class="text-item">14.05.2020</span>
+                                        </div>
+                                        <div class="item-value session-item-value">
+                                            <span class="text-item">12da4rcd2321</span>
+                                        </div>
+                                        <div class="item-value group-button-item-value">
+                                            <div class="del-item">
 
+                                            </div>
+                                            <div class="edit-item">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-items" id="items-2" onclick="changeBg('items-2', 'table-items')">
+                                        <div class="container-img">
+                                            <div class="item-value logo-item-value">
+                                                <span class="text-item"></span>
+                                            </div>
+                                        </div>
+                                        <div class="item-value FIO-item-value">
+                                            <span class="text-item">Тодаренко Регина Петровна</span>
+                                        </div>
+                                        <div class="item-value dob-item-value">
+                                            <span class="text-item">14.06.1990</span>
+                                        </div>
+                                        <div class="item-value email-item-value">
+                                            <span class="text-item">Todar@mail.ru</span>
+                                        </div>
+                                        <div class="item-value dle-item-value">
+                                            <span class="text-item">14.05.2020</span>
+                                        </div>
+                                        <div class="item-value session-item-value">
+                                            <span class="text-item">12da4rcd2321</span>
+                                        </div>
+                                        <div class="item-value group-button-item-value">
+                                            <div class="del-item">
+
+                                            </div>
+                                            <div class="edit-item">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-items" id="items-3" onclick="changeBg('items-3', 'table-items')">
+                                        <div class="container-img">
+                                            <div class="item-value logo-item-value">
+                                                <span class="text-item"></span>
+                                            </div>
+                                        </div>
+                                        <div class="item-value FIO-item-value">
+                                            <span class="text-item">Тодаренко Регина Петровна</span>
+                                        </div>
+                                        <div class="item-value dob-item-value">
+                                            <span class="text-item">14.06.1990</span>
+                                        </div>
+                                        <div class="item-value email-item-value">
+                                            <span class="text-item">Todar@mail.ru</span>
+                                        </div>
+                                        <div class="item-value dle-item-value">
+                                            <span class="text-item">14.05.2020</span>
+                                        </div>
+                                        <div class="item-value session-item-value">
+                                            <span class="text-item">12da4rcd2321</span>
+                                        </div>
+                                        <div class="item-value group-button-item-value">
+                                            <div class="del-item">
+
+                                            </div>
+                                            <div class="edit-item">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="table-items">
-                                    <div class="item-table">
-                                        <div class="logo-item-table">
+                                <div class="page-contant-table" id="page-table-2">
+                                    <div class="table-items" id="items-21"
+                                        onclick="changeBg('items-21', 'table-items')">
+                                        <div class="container-img">
+                                            <div class="item-value logo-item-value">
+                                                <span class="text-item"></span>
+                                            </div>
+                                        </div>
+                                        <div class="item-value FIO-item-value">
+                                            <span class="text-item">Тодаренко Регина Петровна</span>
+                                        </div>
+                                        <div class="item-value dob-item-value">
+                                            <span class="text-item">14.06.1990</span>
+                                        </div>
+                                        <div class="item-value email-item-value">
+                                            <span class="text-item">Todar@mail.ru</span>
+                                        </div>
+                                        <div class="item-value dle-item-value">
+                                            <span class="text-item">14.05.2020</span>
+                                        </div>
+                                        <div class="item-value session-item-value">
+                                            <span class="text-item">12da4rcd2321</span>
+                                        </div>
+                                        <div class="item-value group-button-item-value">
+                                            <div class="del-item">
 
+                                            </div>
+                                            <div class="edit-item">
+
+                                            </div>
                                         </div>
-                                        <div class="item-table FIO-item-table">
-                                            Сахаров Андрей Геннадьевич
+                                    </div>
+                                    <div class="table-items" id="items-22"
+                                        onclick="changeBg('items-22', 'table-items')">
+                                        <div class="container-img">
+                                            <div class="item-value logo-item-value">
+                                                <span class="text-item"></span>
+                                            </div>
                                         </div>
-                                        <div class="item-table dob-item-table">
-                                            23.10.1990
+                                        <div class="item-value FIO-item-value">
+                                            <span class="text-item">Тодаренко Регина Петровна</span>
                                         </div>
-                                        <div class="item-table email-item-table">
-                                            andrey-saxarov@mail.ru
+                                        <div class="item-value dob-item-value">
+                                            <span class="text-item">14.06.1990</span>
                                         </div>
-                                        <div class="item-table dle-item-table">
-                                            14.05.2020
+                                        <div class="item-value email-item-value">
+                                            <span class="text-item">Todar@mail.ru</span>
                                         </div>
-                                        <div class="item-table session-item-table">
-                                            12da4rcd2321
+                                        <div class="item-value dle-item-value">
+                                            <span class="text-item">14.05.2020</span>
                                         </div>
-                                        <div class="item-table group-button-item-table">
+                                        <div class="item-value session-item-value">
+                                            <span class="text-item">12da4rcd2321</span>
+                                        </div>
+                                        <div class="item-value group-button-item-value">
                                             <div class="del-item">
 
                                             </div>
@@ -329,11 +529,12 @@
                                 </div>
                             </div>
                             <div class="content-numerator">
-                                <div class="numer"> 1</div>
-                                <div class="numer">2</div>
-                                <div class="numer">3</div>...
-                                <div class="numer">20</div>
-
+                                <div class="numer"
+                                    onclick="openMenuPage('page-table-1','page-contant-table','numer', this, '#973E95')"
+                                    id="defaultOpenItemTable"><span class="number-page">1</span></div>
+                                <div class="numer"
+                                    onclick="openMenuPage('page-table-2','page-contant-table','numer', this, '#973E95')"><span
+                                        class="number-page">2</span></div>
                             </div>
                         </div>
                     </section>
@@ -353,15 +554,16 @@
 
             </div>
 
-            
+
 
         </div>
-        
+
     </div>
 
-    
+
     <script src="js/tabMenuPage.js"></script>
     <script src="js/tabPage.js"></script>
-    
+
 </body>
+
 </html>
