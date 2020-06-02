@@ -54,9 +54,9 @@
                 <div class="container-profile tabcontent-menu" id="container-profile">
                     <h2 class="head-contant">Мой профиль</h2>
                     <section class="contant">
-                        <button class="tablink" onclick="openPage('Profile', this, '#800080') " id="defaultOpen">Личные
+                        <button class="tablink" onclick="openPage('Profile','tablink','tabcontent', this, '#800080') " id="defaultOpen">Личные
                             данные</button>
-                        <button class="tablink" onclick="openPage('Role', this, '#800080')">Роли</button>
+                        <button class="tablink" onclick="openPage('Role','tablink','tabcontent', this, '#800080')">Роли</button>
 
                         <div id="Profile" class="tabcontent">
                             <div class="header-profile">
@@ -350,7 +350,7 @@
 
                 <div class="container-user tabcontent-menu" id="container-user">
                     <h2 class="head-contant">Управление пользователями</h2>
-                    <section class="contant-user">
+                    <section class="contant-user contant" id="contant-user-maneg">
                         <div>
                             <div class="search-panel">
                                 <div class="group-input-search">
@@ -360,7 +360,9 @@
                                     <input type="text" value="" class="input-search search-dob"
                                         placeholder="Дата рождения">
                                 </div>
-                                <button class="button blue-button button-add"> <span class="button-edit-text">Добавить</span> </button>
+                                <button class="button blue-button button-add" id="button-add"
+                                onclick="buttonEdit1()">
+                                    <span class="button-edit-text">Добавить</span> </button>
                             </div>
                             <div class="head-table">
                                 <div class="item-head img-header">Фото</div>
@@ -528,13 +530,305 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="content-numerator">
                                 <div class="numer"
                                     onclick="openMenuPage('page-table-1','page-contant-table','numer', this, '#973E95')"
                                     id="defaultOpenItemTable"><span class="number-page">1</span></div>
                                 <div class="numer"
-                                    onclick="openMenuPage('page-table-2','page-contant-table','numer', this, '#973E95')"><span
-                                        class="number-page">2</span></div>
+                                    onclick="openMenuPage('page-table-2','page-contant-table','numer', this, '#973E95')">
+                                    <span class="number-page">2</span></div>
+                            </div>
+                        </div>
+
+                    </section>
+                    <section class="contant" id="contant-user-input">
+                        <button class="tablink1" onclick="openPage('Profile1','tablink1','tabcontent1', this, '#800080') " id="defaultOpen1">Личные
+                            данные</button>
+                        <button class="tablink1" onclick="openPage('Role1', 'tablink1','tabcontent1',this, '#800080')">Роли</button>
+
+                        <div id="Profile1" class="tabcontent1">
+                           
+                            <div class="content-profile">
+                                <div class="container-image">
+                                    <div class="image-profile1" id="dropBox1"></div>
+                                    <input type="file" name="file" id="file1" class="inputfile"
+                                        onchange="processFiles1(this.files)" />
+                                    <label class="button blue-button image-update hideElement1" id="image-update"
+                                        for="file1">Обновить</label>
+
+
+                                </div>
+                                <form class="data-profile" id="data-prof" onsubmit="">
+                                    <div class="profile-block1">
+                                        <div class="input input-surname">
+                                            <label class="heder-input" for="surname">Фамилия<span
+                                                    class="asterisk hideElement1">*</span></label>
+                                            <input type="text" value="" class="input-field1" id="surname"
+                                                placeholder="Введите фамилию" required>
+                                        </div>
+
+                                        <div class="input input-name">
+                                            <label class="heder-input" for="name">Имя<span
+                                                    class="asterisk hideElement1">*</span></label>
+                                            <input type="text" value="" class="input-field1" id="name"
+                                                placeholder="Введите имя" required>
+                                        </div>
+
+                                        <div class="input input-patronymic">
+                                            <label class="heder-input" for="patronymic">Отчество<span
+                                                    class="asterisk hideElement1">*</span></label>
+                                            <input type="text" value="" class="input-field1" id="patronymic"
+                                                placeholder="Введите отчество" required>
+                                        </div>
+                                        <div class="group-date-sex">
+                                            <div class="input input-dob">
+                                                <label class="heder-input" for="dob">Дата рождения<span
+                                                        class="asterisk hideElement1">*</span></label>
+                                                <input type="date" value="" class="input-field1 field-dob"
+                                                    id="dob" placeholder="Введите дату" required>
+                                            </div>
+                                            <div class="content-sex">
+                                                <div class="input input-sex-text" id="input-sex-text1">
+                                                    <label class="heder-input" for="sex-text">Пол</label>
+                                                    <input type="text" value="Женский" class="input-field1"
+                                                        id="sex-text">
+                                                </div>
+
+                                                <div class="group-check-sex hideElement1" id="group-check-sex1">
+                                                    <div class="heder-input">Пол</div>
+                                                    <input type="radio" id="r1" name="rr" />
+                                                    <label for="r1"><span></span>м</label>
+
+                                                    <input type="radio" checked="checked" id="r2" name="rr" />
+                                                    <label for="r2"><span></span>ж</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-block2">
+                                        <div class="input input-Email">
+                                            <label class="heder-input" for="email">Email<span
+                                                    class="asterisk hideElement1">*</span></label>
+                                            <input type="email" value="" class="input-field1" id="email"
+                                                placeholder="Введите адрес почты" required>
+                                        </div>
+
+                                        <div class="input input-telephon">
+                                            <label class="heder-input" for="telephon">Телефон</label>
+                                            <input type="tel" pattern="[1-9]{1} [0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                class="input-field1" id="telephon"
+                                                placeholder="Введите номер ( формат: 9 999-999-9999 )">
+
+                                        </div>
+
+                                        <div class="input input-password">
+                                            <label class="heder-input" for="pass">Пароль<span
+                                                    class="asterisk hideElement1">*</span></label>
+                                            <input type="password" value="" class="input-field1 input-pass1"
+                                                id="pass" placeholder="Введите пароль" required>
+                                            <div class="button-open-eye" id="button-open-eye1"
+                                                onclick="replaceType('button-open-eye1','button-close-eye1','input-pass1','password')">
+                                            </div>
+                                            <div class="button-close-eye" id="button-close-eye1"
+                                                onclick="replaceType('button-close-eye1','button-open-eye1','input-pass1','text')">
+                                            </div>
+                                        </div>
+
+                                        <div class="input input-password hideElement1">
+                                            <label class="heder-input" for="rpass">Подтвердить пароль <span
+                                                    class="asterisk hideElement1">*</span></label>
+                                            <input type="password" value=""
+                                                class="input-field1 input-conf-pass1" id="rpass"
+                                                placeholder="Повторите пароль" required>
+                                            <div class="button-conf-open-eye" id="button-conf-open-eye1"
+                                                onclick="replaceType('button-conf-open-eye1','button-conf-close-eye1','input-conf-pass1','password')">
+                                            </div>
+                                            <div class="button-conf-close-eye" id="button-conf-close-eye1"
+                                                onclick="replaceType('button-conf-close-eye1','button-conf-open-eye1','input-conf-pass1','text')">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <footer class="footer-profile">
+                                <div class="group-button hideElement1" id="group-button">
+                                    <button class="button green-button button-save" form="data-prof">Сохранить</button>
+                                    <button class="button blue-button button-cancel"
+                                        onclick="buttonCancel1('input-field1')">Отмена</button>
+                                </div>
+                            </footer>
+                        </div>
+                        <div id="Role1" class="tabcontent1">
+                            <div class="container-role">
+                                <section class="list-role">
+                                    <h3 class="head-items-role">Доступные роли</h3>
+                                    <div class="items-role">
+                                        <button class="item-role1"
+                                            onclick="openMenuPage('detail-god1','tab-detail1','item-role1', this, '#800080')"
+                                            id="defaultOpenRole1">
+                                            <span class="text-item">Бог</span><span class="button-item"></span>
+                                        </button>
+                                        <button class="item-role1"
+                                            onclick="openMenuPage('detail-admin1','tab-detail1','item-role1', this, '#800080')">
+                                            <span class="text-item">Администратор</span><span
+                                                class="button-item"></span>
+                                        </button>
+                                        <button class="item-role1"
+                                            onclick="openMenuPage('detail-user1','tab-detail1','item-role1', this, '#800080')">
+                                            <span class="text-item">Пользователь</span><span class="button-item"></span>
+                                        </button>
+                                    </div>
+                                </section>
+                                <section class="detail-role">
+                                    <div class="tab-detail1" id="detail-god1">
+                                        <h3 class="head-detail-role">Роль: Бог</h3>
+                                        <div class="text-detail-role">
+                                            <div class="group-block1">
+                                                <div class="input-role input-sys-name">
+                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <input type="text" value="God" class="input-field-role"
+                                                        id="sys-name" placeholder="Введите системное имя" required>
+                                                </div>
+
+                                                <div class="input input-start-date">
+                                                    <label class="heder-input" for="start-date">Дата начала</label>
+                                                    <input type="date" value="2019-01-14"
+                                                        class="input-field-role field-date-role" id="start-date"
+                                                        placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                            <div class="group-block2">
+                                                <div class="input-role input-denomination">
+                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <input type="text" value="Бог" class="input-field-role"
+                                                        id="denomination" placeholder="Введите наименование" required>
+                                                </div>
+
+                                                <div class="input input-finish-date">
+                                                    <label class="heder-input" for="end-date">Дата окончания</label>
+                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                        id="end-date" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="access-function">
+                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="items-access-function">
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление пользователями</span><span
+                                                        class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление ролями</span><span
+                                                        class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Профиль</span><span
+                                                        class="button-item"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-detail1" id="detail-admin1">
+                                        <h3 class="head-detail-role">Роль: Администратор</h3>
+                                        <div class="text-detail-role">
+                                            <div class="group-block1">
+                                                <div class="input-role input-sys-name">
+                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <input type="text" value="Admin" class="input-field-role"
+                                                        id="sys-name" placeholder="Введите системное имя" required>
+                                                </div>
+
+                                                <div class="input input-start-date">
+                                                    <label class="heder-input" for="start-date2">Дата начала</label>
+                                                    <input type="date" value="2020-01-14"
+                                                        class="input-field-role field-date-role" id="start-date2"
+                                                        placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                            <div class="group-block2">
+                                                <div class="input-role input-denomination">
+                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <input type="text" value="Администратор" class="input-field-role"
+                                                        id="denomination" placeholder="Введите наименование" required>
+                                                </div>
+
+                                                <div class="input input-finish-date">
+                                                    <label class="heder-input" for="end-date2">Дата окончания</label>
+                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                        id="end-date2" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="access-function">
+                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="items-access-function">
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление пользователями</span><span
+                                                        class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Управление ролями</span><span
+                                                        class="button-item"></span>
+                                                </div>
+                                                <div class="item-function">
+                                                    <span class="text-item">Профиль</span><span
+                                                        class="button-item"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-detail1" id="detail-user1">
+                                        <h3 class="head-detail-role">Роль: Пользователь</h3>
+                                        <div class="text-detail-role">
+                                            <div class="group-block1">
+                                                <div class="input-role input-sys-name">
+                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <input type="text" value="User" class="input-field-role"
+                                                        id="sys-name" placeholder="Введите системное имя" required>
+                                                </div>
+
+                                                <div class="input input-start-date">
+                                                    <label class="heder-input" for="start-date3">Дата начала</label>
+                                                    <input type="date" value="2018-01-14"
+                                                        class="input-field-role field-date-role" id="start-date3"
+                                                        placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                            <div class="group-block2">
+                                                <div class="input-role input-denomination">
+                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <input type="text" value="Пользователь" class="input-field-role"
+                                                        id="denomination" placeholder="Введите наименование" required>
+                                                </div>
+
+                                                <div class="input input-finish-date">
+                                                    <label class="heder-input" for="end-date3">Дата окончания</label>
+                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                        id="end-date3" placeholder="Введите дату" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="access-function">
+                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="items-access-function">
+
+                                                <div class="item-function">
+                                                    <span class="text-item">Профиль</span><span
+                                                        class="button-item"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
                             </div>
                         </div>
                     </section>
