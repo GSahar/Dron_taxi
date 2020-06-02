@@ -93,6 +93,112 @@ function buttonEdit() {
   element.style['-webkit-calendar-picker-indicator'] = 'display: none;';
 }
 
+/*функция вызываемая при нажатии кнопки редактирования */
+function buttonEdit1() {
+  let i, contentAsterisk;
+
+  //поле для вывода пола
+  document.getElementById("input-sex-text1").style.display = "none";
+  //группа чекбоксов для определения пола
+  document.getElementById("group-check-sex1").style.display = "block";
+  //кнопка редактирования
+  document.getElementById("button-add").style.visibility = "hidden";
+  //
+  document.getElementById("contant-user-input").style.display = "block";
+  //
+  document.getElementById("contant-user-maneg").style.display = "none";
+
+  //Элементы которые изначально скрыты
+  //кнопка редактирования
+  //кнопка обновитить фотографию
+  //поле подтверждения пароля
+  //группа кнопок сохранить/отмена
+  contentAsterisk = document.getElementsByClassName("hideElement1");
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.visibility = "visible";
+  }
+
+
+  let inputElem = document.getElementsByClassName("input-field1");
+  for (i = 0; i < inputElem.length; i++) {
+    inputElem[i].removeAttribute('disabled');// сделать активной  
+
+    //стиль для input при редактировании
+    inputElem[i].style.border = 'solid 2px #00BFFF';
+    inputElem[i].style.borderBottom = 'solid 2px #00BFFF';
+    inputElem[i].style.borderRadius = '5px';
+    inputElem[i].style.color = '#000000';
+    inputElem[i].style.backgroundColor = '#ffffff';
+
+  }
+
+  document.getElementById('surname').placeholder = "Введите фамилию";
+  document.getElementById('name').placeholder = "Введите имя";
+  document.getElementById('patronymic').placeholder = "Введите отчество";
+  document.getElementById('dob').placeholder = "Введите дату";
+  document.getElementById('email').placeholder = "Введите адрес почты";
+  document.getElementById('telephon').placeholder = "Введите номер ( формат: 9 999-999-9999 )";
+  document.getElementById('pass').placeholder = "Введите пароль";
+  document.getElementById('rpass').placeholder = "Повторите пароль";
+
+  //отключение видимости кнопки календаря
+  let element = document.getElementById('dob');
+  element.style['-webkit-calendar-picker-indicator'] = 'display: none;';
+}
+
+function buttonCancel1(namefield) {
+
+  //contant-user-maneg
+  //contant-user-input
+  let i, contentAsterisk;
+
+  //поле для вывода пола
+  document.getElementById("input-sex-text1").style.display = "block";
+  //группа чекбоксов для определения пола
+  document.getElementById("group-check-sex1").style.display = "none";
+  //кнопка редактирования
+  document.getElementById("button-add").style.visibility = "visible";
+  //
+  document.getElementById("contant-user-input").style.display = "none";
+  //
+  document.getElementById("contant-user-maneg").style.display = "block";
+
+
+  //Элементы которые изначально скрыты
+  //кнопка обновитить фотографию
+  //поле подтверждения пароля
+  //группа кнопок сохранить/отмена
+  contentAsterisk = document.getElementsByClassName("hideElement1");
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.visibility = "hidden";
+  }
+
+  let inputElem = document.getElementsByClassName(namefield);
+  for (i = 0; i < inputElem.length; i++) {
+    inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
+
+    //стиль input при просмотре
+    inputElem[i].style.border = '2px solid #800080';
+    inputElem[i].style.borderBottom = '2px solid #00BFFF';
+    inputElem[i].style.borderRadius = '0px';
+    inputElem[i].style.color = '#ffffff';
+    inputElem[i].style.backgroundColor = '#800080';
+  }
+
+  //включение видимости кнопки календаря
+  let element = document.getElementById('dob');
+  element.style['-webkit-calendar-picker-indicator'] = 'display: block;';
+
+  document.getElementById('surname').placeholder = "";
+  document.getElementById('name').placeholder = "";
+  document.getElementById('patronymic').placeholder = "";
+  document.getElementById('dob').placeholder = "";
+  document.getElementById('email').placeholder = "";
+  document.getElementById('telephon').placeholder = "";
+  document.getElementById('pass').placeholder = "";
+  document.getElementById('rpass').placeholder = "";
+}
+
 function replaceType(idHide, idShow, element, type) {
   let elementReplace = document.getElementsByClassName(element);
 

@@ -33,3 +33,6 @@ function openMenuPage(pageName,nametabcontent,namemenu, elmnt, color) {
   document.getElementById("defaultOpenMenu").click();
   document.getElementById("defaultOpenRole").click();
   document.getElementById("defaultOpenItemTable").click();
+
+
+  document.getElementById("defaultOpenRole1").click();

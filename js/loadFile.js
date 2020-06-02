@@ -12,6 +12,20 @@ function processFiles(files) {
     reader.readAsDataURL(file);
 }
 
+function processFiles1(files) {
+  var file = files[0];
+  
+  var reader = new FileReader();
+
+  reader.onload = function (e) {
+    // Используем URL изображения для заполнения фона
+    dropBox1.style.backgroundImage = "url('" + e.target.result + "')";
+  };
+
+  // Начинаем считывать изображение
+  reader.readAsDataURL(file);
+}
+
 /*function drop(e) {
     // Аннулируем это событие для всех других
     e.stopPropagation();
