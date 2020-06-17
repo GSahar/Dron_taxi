@@ -529,10 +529,17 @@ input[type="radio"]:checked + label span {
 	width: 100%;
 	height: 95%;
 	display: flex;
-	margin-top: 10px;
 	position: relative;
 }
-.head-items-role,.head-detail-role,.head-access-function {
+
+.role-content {
+	width: 100%;
+	height: 95%;
+	display: flex;
+	position: relative;
+}
+
+.head-items-role,.head-detail-role,.head-access-function,.items-role2 {
 	font-weight: 500;
 	font-size: 18px;
 	width: 94%;
@@ -540,17 +547,17 @@ input[type="radio"]:checked + label span {
 	
 }
 
-.items-role,.items-access-function {
+.items-role,.items-access-function,.items-role2 {
 	border: 1px solid #ffffff;
 	
 	width: 100%;
 }
 
-.list-role {
+.list-role,.list-role1 {
 	width: 42%;	
 }
 
-.list-role::after {
+.list-role::after,.list-role1::after  {
 	content: "";
 	display:block; 
 	background-color: #973E95;
@@ -562,7 +569,7 @@ input[type="radio"]:checked + label span {
 	left: 47%;
 }
 
-.item-role,.item-function,.item-role1,.item-function1  {
+.item-role,.item-function,.item-role1,.item-role2,.item-function1,.item-function2  {
 	width: 100%;	
 	background-color: #973E95;
 	padding: 0.9em 2.5em;
@@ -600,12 +607,12 @@ input[type="radio"]:checked + label span {
 	font-family: inherit;
 }
 
-.item-role:nth-child(even),.item-function:nth-child(even),.item-role1:nth-child(even),.item-function1:nth-child(even)  {
+.item-role:nth-child(even),.item-function:nth-child(even),.item-role1:nth-child(even),.item-role2:nth-child(even),.item-function1:nth-child(even),.item-function2:nth-child(even)   {
 	background-color: #AD66A9;
 	border: solid 2px #AD66A9;
 }
 
-.item-role:hover,.item-role1:hover {
+.item-role:hover,.item-role1:hover,.item-role2:hover,.item-function2:hover {
 	border: solid 2px #00BFFF;
 }
 
@@ -659,8 +666,16 @@ input[type="radio"]:checked + label span {
 	position: absolute;
 }
 
-.contant-user {
+.contant-user{
+	position: relative;
 	padding: 30px 35px 5px 35px;
+	height: 558px;
+}
+
+.contant-role {
+	position: relative;
+	padding: 30px 35px 5px 35px;
+	height: 95%;
 }
 
 .search-panel {
@@ -924,6 +939,9 @@ input[type="radio"]:checked + label span {
 }
 
 .content-numerator {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
 	display: flex;
 	width: 5%;
 	margin: auto;
