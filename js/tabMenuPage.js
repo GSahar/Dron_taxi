@@ -22,6 +22,12 @@ function openMenuPage(pageName,nametabcontent,namemenu, elmnt, color) {
     if(namemenu === 'item-role') {
       elmnt.style.border = 'solid 2px #800080';	
     }
+    if(namemenu === 'item-role1') {
+      elmnt.style.border = 'solid 2px #800080';	
+    }
+    if(namemenu === 'item-role2') {
+      elmnt.style.border = 'solid 2px #800080';	
+    }
     if(namemenu === 'numer') {
       elmnt.style.border = 'solid 1px #ffffff';	
     }
@@ -36,3 +42,4 @@ function openMenuPage(pageName,nametabcontent,namemenu, elmnt, color) {
 
 
   document.getElementById("defaultOpenRole1").click();
+  document.getElementById("defaultOpenRole2").click();
