@@ -31,6 +31,9 @@ function openMenuPage(pageName,nametabcontent,namemenu, elmnt, color) {
     if(namemenu === 'numer') {
       elmnt.style.border = 'solid 1px #ffffff';	
     }
+    if(namemenu === 'numer1') {
+      elmnt.style.border = 'solid 1px #ffffff';	
+    }
     //
       //tablinks[i].style.borderBottom ='solid 2px #00BFFF';
   }
@@ -43,3 +46,4 @@ function openMenuPage(pageName,nametabcontent,namemenu, elmnt, color) {
 
   document.getElementById("defaultOpenRole1").click();
   document.getElementById("defaultOpenRole2").click();
+  document.getElementById("defaultOpenItemTable1").click();
