@@ -1032,26 +1032,75 @@
                         <div class="">
                             <div class="role-content">
                                 <section class="list-role1">
-                                    <div class="head-table">
+                                    <div class="head-table1">
                                         <div class="item-head img-header">Системное имя</div>
                                         <div class="item-head FIO-header">Наименование</div>
-                                        <div class="item-head dob-header">Дата окончания</div>
+                                        <div class="item-head dob-header">Дата начала</div>
                                     </div>
                                     <!--h3 class="head-items-role">Доступные роли</h3-->
                                     <div class="items-role2">
-                                        <button class="item-role2"
-                                            onclick="openMenuPage('detail-god2','tab-detail2','item-role2', this, '#800080')"
-                                            id="defaultOpenRole2">
-                                            <span class="text-item">Бог</span><span class="button-item"></span>
-                                        </button>
+                                        <div class="item-role2" onclick="openMenuPage('detail-god2','tab-detail2','item-role2', this, '#800080')" id="defaultOpenRole2">
+                                            <div class="item-value sysname-role-item-value">
+                                                <span class="text-item">god</span>
+                                            </div>
+                                            <div class="item-value name-role-item-value">
+                                                <span class="text-item">Бог</span>
+                                            </div>
+                                            <div class="item-value date-end-item-value">
+                                                <span class="text-item">14.05.2020</span>
+                                            </div>
+                                            <div class="item-value group-button-item-value">
+                                                <div class="edit-item1" onclick="buttonEdit2()">
+    
+                                                </div>
+                                                <div class="del-item1" onclick="buttonDelete('items-22')">
+    
+                                                </div>                                                
+                                            </div>
+                                            <!--span class="text-item">Бог</span><span class="button-item"></span-->
+                                        </div>
                                         <button class="item-role2"
                                             onclick="openMenuPage('detail-admin2','tab-detail2','item-role2', this, '#800080')">
-                                            <span class="text-item">Администратор</span><span
-                                                class="button-item"></span>
+                                            <div class="item-value sysname-role-item-value">
+                                                <span class="text-item">admin</span>
+                                            </div>
+                                            <div class="item-value name-role-item-value">
+                                                <span class="text-item">Администратор</span>
+                                            </div>
+                                            <div class="item-value date-end-item-value">
+                                                <span class="text-item">14.05.2020</span>
+                                            </div>
+                                            <div class="item-value group-button-item-value">
+                                                <div class="edit-item1" onclick="buttonEdit2()">
+    
+                                                </div>
+                                                <div class="del-item1" onclick="buttonDelete('items-22')">
+    
+                                                </div>                                                
+                                            </div>
+                                            <!--span class="text-item">Администратор</span><span
+                                                class="button-item"></span-->
                                         </button>
                                         <button class="item-role2"
                                             onclick="openMenuPage('detail-user2','tab-detail2','item-role2', this, '#800080')">
-                                            <span class="text-item">Пользователь</span><span class="button-item"></span>
+                                            <div class="item-value sysname-role-item-value">
+                                                <span class="text-item">user</span>
+                                            </div>
+                                            <div class="item-value name-role-item-value">
+                                                <span class="text-item">Пользователь</span>
+                                            </div>
+                                            <div class="item-value date-end-item-value">
+                                                <span class="text-item">14.05.2020</span>
+                                            </div>
+                                            <div class="item-value group-button-item-value">
+                                                <div class="edit-item1" onclick="buttonEdit2()">
+    
+                                                </div>
+                                                <div class="del-item1" onclick="buttonDelete('items-22')">
+    
+                                                </div>                                                
+                                            </div>
+                                            <!--span class="text-item">Пользователь</span><span class="button-item"></span-->
                                         </button>
                                     </div>
                                 </section>
@@ -1089,7 +1138,7 @@
                                         </div>
 
 
-                                        <div class="access-function">
+                                        <div class="access-function1">
                                             <h3 class="head-access-function">Доступные функции</h3>
                                             <div class="items-access-function">
                                                 <div class="item-function2">
@@ -1106,6 +1155,12 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <footer class="footer-profile1">
+                                            <div class="group-button">
+                                                <button class="button green-button button-save">Сохранить</button>
+                                                <button class="button blue-button button-cancel">Отмена</button>
+                                            </div>
+                                        </footer>
                                     </div>
                                     <div class="tab-detail2" id="detail-admin2">
                                         <h3 class="head-detail-role">Роль: Администратор</h3>
@@ -1139,7 +1194,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="access-function">
+                                        <div class="access-function1">
                                             <h3 class="head-access-function">Доступные функции</h3>
                                             <div class="items-access-function">
                                                 <div class="item-function2">
@@ -1156,6 +1211,12 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <footer class="footer-profile1">
+                                            <div class="group-button">
+                                                <button class="button green-button button-save">Сохранить</button>
+                                                <button class="button blue-button button-cancel">Отмена</button>
+                                            </div>
+                                        </footer>
                                     </div>
                                     <div class="tab-detail2" id="detail-user2">
                                         <h3 class="head-detail-role">Роль: Пользователь</h3>
@@ -1189,7 +1250,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="access-function">
+                                        <div class="access-function1">
                                             <h3 class="head-access-function">Доступные функции</h3>
                                             <div class="items-access-function">
 
@@ -1199,17 +1260,19 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <footer class="footer-profile1">
+                                            <div class="group-button">
+                                                <button class="button green-button button-save">Сохранить</button>
+                                                <button class="button blue-button button-cancel">Отмена</button>
+                                            </div>
+                                        </footer>
                                     </div>
                                 </section>
 
                             </div>
                         </div>
-                        <footer class="footer-profile">
-                            <div class="group-button">
-                                <button class="button green-button button-save">Сохранить</button>
-                                <button class="button blue-button button-cancel">Отмена</button>
-                            </div>
-                        </footer>
+                       
                     </section>
                 </div>
 
