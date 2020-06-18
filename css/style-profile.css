@@ -472,6 +472,10 @@ input[type="radio"]:checked + label span {
 	padding-bottom: 0;
 }
 
+.group-button1 {
+	display: none;
+}
+
 .button-edit-text {
 	margin-left: 30px;
 	font-weight: inherit;	
@@ -821,6 +825,18 @@ input[type="radio"]:checked + label span {
 	margin-left: 6%;
 }
 
+.sysname-header {
+	margin-left: 5%;
+}
+
+.name-role-header {
+	margin-left: 10%;
+}
+
+.date-end-header {
+	margin-left: 21%;
+}
+
 .item-value {
 	height: 100%;
 	font-size: 12px;
@@ -1036,6 +1052,18 @@ input[type="radio"]:checked + label span {
 	padding-bottom: 15px;
 }
 
+
+.content-numerator1 {
+	position: absolute;
+	left: 20%;
+	bottom: 0;
+	display: flex;
+	width: 5%;
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
 .number-page {
 	font-size: 11px;
 	font-weight: 500;
@@ -1047,6 +1075,16 @@ input[type="radio"]:checked + label span {
 	border-radius: 2px;
 }
 .numer:hover {	
+	border: 1px solid #00BFFF;	
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.numer1 {	
+	border: 1px solid #720073;	
+	border-radius: 2px;
+}
+.numer1:hover {	
 	border: 1px solid #00BFFF;	
 	border-radius: 2px;
 	cursor: pointer;
@@ -1133,5 +1171,17 @@ input[type="radio"]:checked + label span {
 	
 	.session-header {
 		margin-left: 4%;
+	}
+
+	.sysname-header {
+		margin-left: 1%;
+	}
+	
+	.name-role-header {
+		margin-left: 10%;
+	}
+	
+	.date-end-header {
+		margin-left: 15%;
 	}
 }
