@@ -311,6 +311,21 @@ function buttonEdit2() {
 
 function buttonDelete(idField) {
   document.getElementById(idField).remove();
+
+  if(idField === "defaultOpenRole2"){
+    document.getElementById("detail-god2").remove();    
+  }
+
+  if(idField === "role-a"){
+    document.getElementById("detail-admin2").remove();    
+  }
+
+  if(idField === "role-u"){
+    document.getElementById("detail-user2").remove();  
+    document.getElementById("defaultOpenItemTable1").style.display = "none"; 
+      
+  }
+
 }
 
 /*var el = document.getElementById('123');
@@ -344,4 +359,148 @@ function changeBg(idTableItem, classTableItem) {
 
   document.getElementById(idTableItem).style.backgroundColor = '#800080';
   document.getElementById(idTableItem).style.border = '2px solid #800080';
+}
+
+
+/*функция вызываемая при нажатии кнопки редактирования */
+function buttonEdit3() {
+  let i, contentAsterisk;
+
+
+  //кнопка редактирования
+  document.getElementById("button-add1").style.visibility = "hidden";
+ 
+
+  //Элементы которые изначально скрыты
+  //кнопка редактирования
+  //кнопка обновитить фотографию
+  //поле подтверждения пароля
+  //группа кнопок сохранить/отмена
+  contentAsterisk = document.getElementsByClassName("group-button1");
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.display = "block";
+  }
+
+
+  let inputElem = document.getElementsByClassName("input-field-role");
+  for (i = 0; i < inputElem.length; i++) {
+    inputElem[i].removeAttribute('disabled');// сделать активной  
+
+    //стиль для input при редактировании
+    inputElem[i].style.border = 'solid 2px #00BFFF';
+    inputElem[i].style.borderBottom = 'solid 2px #00BFFF';
+    inputElem[i].style.borderRadius = '5px';
+    inputElem[i].style.color = '#000000';
+    inputElem[i].style.backgroundColor = '#ffffff';
+
+  }
+ 
+  //отключение видимости кнопки календаря
+  let element = document.getElementById('dob');
+  element.style['-webkit-calendar-picker-indicator'] = 'display: none;';
+}
+
+function buttonCancel3(namefield) {
+
+  //contant-user-maneg
+  //contant-user-input
+  let i, contentAsterisk;
+
+  //кнопка редактирования
+  document.getElementById("button-add1").style.visibility = "visible";
+
+
+  //Элементы которые изначально скрыты
+  //кнопка обновитить фотографию
+  //поле подтверждения пароля
+  //группа кнопок сохранить/отмена
+  contentAsterisk = document.getElementsByClassName("group-button1");
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.display = "none";
+  }
+
+ 
+  let inputElem = document.getElementsByClassName("input-field-role");
+  for (i = 0; i < inputElem.length; i++) {
+    inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
+
+    //стиль input при просмотре
+    inputElem[i].style.border = '2px solid #800080';
+    inputElem[i].style.borderBottom = '2px solid #00BFFF';
+    inputElem[i].style.borderRadius = '0px';
+    inputElem[i].style.color = '#ffffff';
+    inputElem[i].style.backgroundColor = '#800080';
+  }
+
+  //включение видимости кнопки календаря
+  let element = document.getElementById('dob');
+  element.style['-webkit-calendar-picker-indicator'] = 'display: block;';
+
+  document.getElementById('item-sysname-god').innerHTML = "god";
+  document.getElementById('item-name-god').innerHTML = "Бог";
+  document.getElementById('sys-name-god').value = "God";
+  document.getElementById('denomination-god').value = "Бог";
+  document.getElementById('head-detail-god').innerHTML = 'Роль: Бог';
+
+  document.getElementById('item-sysname-adm').innerHTML = "admin";
+  document.getElementById('item-name-adm').innerHTML = "Администратор";
+  document.getElementById('sys-name-adm').value = "admin";
+  document.getElementById('denomination-adm').value = "Администратор";
+  document.getElementById('head-detail-adm').innerHTML = 'Роль: Администратор';
+
+  document.getElementById('item-sysname-usr').innerHTML = "user";
+  document.getElementById('item-name-usr').innerHTML = "Пользователь";
+  document.getElementById('sys-name-usr').value = "User";
+  document.getElementById('denomination-usr').value = "Пользователь";
+  document.getElementById('head-detail-usr').innerHTML = 'Роль: Пользователь';
+  
+}
+
+function buttonSave3(namefield) {
+
+  //contant-user-maneg
+  //contant-user-input
+  let i, contentAsterisk;
+
+  //кнопка редактирования
+  document.getElementById("button-add1").style.visibility = "visible";
+
+
+  //Элементы которые изначально скрыты
+  //кнопка обновитить фотографию
+  //поле подтверждения пароля
+  //группа кнопок сохранить/отмена
+  contentAsterisk = document.getElementsByClassName("group-button1");
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.display = "none";
+  }
+
+ 
+  let inputElem = document.getElementsByClassName("input-field-role");
+  for (i = 0; i < inputElem.length; i++) {
+    inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
+
+    //стиль input при просмотре
+    inputElem[i].style.border = '2px solid #800080';
+    inputElem[i].style.borderBottom = '2px solid #00BFFF';
+    inputElem[i].style.borderRadius = '0px';
+    inputElem[i].style.color = '#ffffff';
+    inputElem[i].style.backgroundColor = '#800080';
+  }
+
+  //включение видимости кнопки календаря
+  let element = document.getElementById('dob');
+  element.style['-webkit-calendar-picker-indicator'] = 'display: block;';
+
+  
+}
+function innerText1(input1,idNameDiv,tableItem) {
+
+  let textInput = input1.value;
+
+  if(idNameDiv !== ''){
+    document.getElementById(idNameDiv).innerHTML = 'Роль: '+textInput;
+  }
+  
+  document.getElementById(tableItem).innerHTML = textInput;
 }
