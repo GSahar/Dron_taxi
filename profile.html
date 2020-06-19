@@ -1020,12 +1020,12 @@
                         <div class="search-panel">
                             <div class="group-input-search">
                                 <input type="text" value="" class="input-search searsh-surname"
-                                    placeholder="Фамилия">
+                                    placeholder="Системное имя">
 
                                 <input type="text" value="" class="input-search search-dob"
-                                    placeholder="Дата рождения">
+                                    placeholder="Наименование">
                             </div>
-                            <button class="button blue-button button-add" id="button-add"
+                            <button class="button blue-button button-add" id="button-add1"
                             onclick="buttonEdit1()">
                                 <span class="button-edit-text">Добавить</span> </button>
                         </div>
@@ -1041,62 +1041,62 @@
                                     <div class="items-role2">
                                         <div class="item-role2" onclick="openMenuPage('detail-god2','tab-detail2','item-role2', this, '#800080')" id="defaultOpenRole2">
                                             <div class="item-value sysname-role-item-value">
-                                                <span class="text-item">god</span>
+                                                <span class="text-item" id="item-sysname-god">god</span>
                                             </div>
                                             <div class="item-value name-role-item-value">
-                                                <span class="text-item">Бог</span>
+                                                <span class="text-item" id="item-name-god">Бог</span>
                                             </div>
                                             <div class="item-value date-end-item-value">
                                                 <span class="text-item">14.05.2020</span>
                                             </div>
                                             <div class="item-value group-button-item-value">
-                                                <div class="edit-item1" onclick="buttonEdit2()">
+                                                <div class="edit-item1" onclick="buttonEdit3()">
     
                                                 </div>
-                                                <div class="del-item1" onclick="buttonDelete('items-22')">
+                                                <div class="del-item1" onclick="buttonDelete('defaultOpenRole2')">
     
                                                 </div>                                                
                                             </div>
                                             <!--span class="text-item">Бог</span><span class="button-item"></span-->
                                         </div>
                                         <div class="item-role2"
-                                            onclick="openMenuPage('detail-admin2','tab-detail2','item-role2', this, '#800080')">
+                                            onclick="openMenuPage('detail-admin2','tab-detail2','item-role2', this, '#800080')" id="role-a">
                                             <div class="item-value sysname-role-item-value">
-                                                <span class="text-item">admin</span>
+                                                <span class="text-item" id="item-sysname-adm">admin</span>
                                             </div>
                                             <div class="item-value name-role-item-value">
-                                                <span class="text-item">Администратор</span>
+                                                <span class="text-item" id="item-name-adm">Администратор</span>
                                             </div>
                                             <div class="item-value date-end-item-value">
                                                 <span class="text-item">14.05.2020</span>
                                             </div>
                                             <div class="item-value group-button-item-value">
-                                                <div class="edit-item1" onclick="buttonEdit2()">
+                                                <div class="edit-item1" onclick="buttonEdit3()">
     
                                                 </div>
-                                                <div class="del-item1" onclick="buttonDelete('items-22')">
+                                                <div class="del-item1" onclick="buttonDelete('role-a')">
     
                                                 </div>                                                
                                             </div>
                                             <!--span class="text-item">Администратор</span><span
                                                 class="button-item"></span-->
                                         </div>
-                                        <div class="item-role2"
-                                            onclick="openMenuPage('detail-user2','tab-detail2','item-role2', this, '#800080')">
+                                        <div class="item-role2" 
+                                            onclick="openMenuPage('detail-user2','tab-detail2','item-role2', this, '#800080')" id="role-u">
                                             <div class="item-value sysname-role-item-value">
-                                                <span class="text-item">user</span>
+                                                <span class="text-item" id="item-sysname-usr">user</span>
                                             </div>
                                             <div class="item-value name-role-item-value">
-                                                <span class="text-item">Пользователь</span>
+                                                <span class="text-item" id="item-name-usr">Пользователь</span>
                                             </div>
                                             <div class="item-value date-end-item-value">
                                                 <span class="text-item">14.05.2020</span>
                                             </div>
                                             <div class="item-value group-button-item-value">
-                                                <div class="edit-item1" onclick="buttonEdit2()">
+                                                <div class="edit-item1" onclick="buttonEdit3()">
     
                                                 </div>
-                                                <div class="del-item1" onclick="buttonDelete('items-22')">
+                                                <div class="del-item1" onclick="buttonDelete('role-u')">
     
                                                 </div>                                                
                                             </div>
@@ -1112,13 +1112,13 @@
                                 </section>
                                 <section class="detail-role">
                                     <div class="tab-detail2" id="detail-god2">
-                                        <h3 class="head-detail-role">Роль: Бог</h3>
+                                        <h3 class="head-detail-role" id="head-detail-god">Роль: Бог</h3>
                                         <div class="text-detail-role">
                                             <div class="group-block1">
                                                 <div class="input-role input-sys-name">
-                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <label class="heder-input" for="sys-name-god">Системное имя</label>
                                                     <input type="text" value="God" class="input-field-role"
-                                                        id="sys-name" placeholder="Введите системное имя" required>
+                                                        id="sys-name-god" placeholder="Введите системное имя" onchange="innerText1(this,'','item-sysname-god')" required>
                                                 </div>
 
                                                 <div class="input input-start-date">
@@ -1130,9 +1130,9 @@
                                             </div>
                                             <div class="group-block2">
                                                 <div class="input-role input-denomination">
-                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <label class="heder-input" for="denomination-god">Наименование</label>
                                                     <input type="text" value="Бог" class="input-field-role"
-                                                        id="denomination" placeholder="Введите наименование" required>
+                                                        id="denomination-god" placeholder="Введите наименование" onchange="innerText1(this,'head-detail-god','item-name-god')" required>
                                                 </div>
 
                                                 <div class="input input-finish-date">
@@ -1163,19 +1163,19 @@
                                         </div>
                                         <footer class="footer-profile1">
                                             <div class="group-button1">
-                                                <button class="button green-button button-save">Сохранить</button>
-                                                <button class="button blue-button button-cancel">Отмена</button>
+                                                <button class="button green-button button-save" onclick="buttonSave3()">Сохранить</button>
+                                                <button class="button blue-button button-cancel" onclick="buttonCancel3()">Отмена</button>
                                             </div>
                                         </footer>
                                     </div>
                                     <div class="tab-detail2" id="detail-admin2">
-                                        <h3 class="head-detail-role">Роль: Администратор</h3>
+                                        <h3 class="head-detail-role" id="head-detail-adm">Роль: Администратор</h3>
                                         <div class="text-detail-role">
                                             <div class="group-block1">
                                                 <div class="input-role input-sys-name">
-                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <label class="heder-input" for="sys-name-adm">Системное имя</label>
                                                     <input type="text" value="Admin" class="input-field-role"
-                                                        id="sys-name" placeholder="Введите системное имя" required>
+                                                        id="sys-name-adm" placeholder="Введите системное имя" onchange="innerText1(this,'','item-sysname-adm')" required>
                                                 </div>
 
                                                 <div class="input input-start-date">
@@ -1187,9 +1187,9 @@
                                             </div>
                                             <div class="group-block2">
                                                 <div class="input-role input-denomination">
-                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <label class="heder-input" for="denomination-adm">Наименование</label>
                                                     <input type="text" value="Администратор" class="input-field-role"
-                                                        id="denomination" placeholder="Введите наименование" required>
+                                                        id="denomination-adm" placeholder="Введите наименование" onchange="innerText1(this,'head-detail-adm','item-name-adm')" required>
                                                 </div>
 
                                                 <div class="input input-finish-date">
@@ -1219,19 +1219,19 @@
                                         </div>
                                         <footer class="footer-profile1">
                                             <div class="group-button1">
-                                                <button class="button green-button button-save">Сохранить</button>
-                                                <button class="button blue-button button-cancel">Отмена</button>
+                                                <button class="button green-button button-save" onclick="buttonSave3()">Сохранить</button>
+                                                <button class="button blue-button button-cancel" onclick="buttonCancel3()">Отмена</button>
                                             </div>
                                         </footer>
                                     </div>
                                     <div class="tab-detail2" id="detail-user2">
-                                        <h3 class="head-detail-role">Роль: Пользователь</h3>
+                                        <h3 class="head-detail-role" id="head-detail-usr">Роль: Пользователь</h3>
                                         <div class="text-detail-role">
                                             <div class="group-block1">
                                                 <div class="input-role input-sys-name">
-                                                    <label class="heder-input" for="sys-name">Системное имя</label>
+                                                    <label class="heder-input" for="sys-name-usr">Системное имя</label>
                                                     <input type="text" value="User" class="input-field-role"
-                                                        id="sys-name" placeholder="Введите системное имя" required>
+                                                        id="sys-name-usr" placeholder="Введите системное имя" onchange="innerText1(this,'','item-sysname-usr')" required>
                                                 </div>
 
                                                 <div class="input input-start-date">
@@ -1243,9 +1243,9 @@
                                             </div>
                                             <div class="group-block2">
                                                 <div class="input-role input-denomination">
-                                                    <label class="heder-input" for="denomination">Наименование</label>
+                                                    <label class="heder-input" for="denomination-usr">Наименование</label>
                                                     <input type="text" value="Пользователь" class="input-field-role"
-                                                        id="denomination" placeholder="Введите наименование" required>
+                                                        id="denomination-usr" placeholder="Введите наименование" onchange="innerText1(this,'head-detail-usr','item-name-usr')" required>
                                                 </div>
 
                                                 <div class="input input-finish-date">
@@ -1269,8 +1269,8 @@
 
                                         <footer class="footer-profile1">
                                             <div class="group-button1">
-                                                <button class="button green-button button-save">Сохранить</button>
-                                                <button class="button blue-button button-cancel">Отмена</button>
+                                                <button class="button green-button button-save" onclick="buttonSave3()">Сохранить</button>
+                                                <button class="button blue-button button-cancel" onclick="buttonCancel3()">Отмена</button>
                                             </div>
                                         </footer>
                                     </div>
