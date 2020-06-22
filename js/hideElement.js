@@ -494,6 +494,55 @@ function buttonSave3(namefield) {
 
   
 }
+
+
+function buttonReg(idWindow) {
+
+  //contant-user-maneg
+  //contant-user-input
+  let i, contentAsterisk;
+
+  //кнопка редактирования
+  if(idWindow=='window-autoris'){
+    document.getElementById("window-autoris").style.visibility = "visible";
+    document.getElementById("window-registration").style.visibility = "hidden";
+  }
+  else {
+    document.getElementById("window-autoris").style.visibility = "hidden";
+    document.getElementById("window-registration").style.visibility = "visible";
+  }
+  
+
+
+  //Элементы которые изначально скрыты
+  //кнопка обновитить фотографию
+  //поле подтверждения пароля
+  //группа кнопок сохранить/отмена
+  /*contentAsterisk = document.getElementsByClassName("group-button1");
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.display = "none";
+  }
+
+ 
+  let inputElem = document.getElementsByClassName("input-field-role");
+  for (i = 0; i < inputElem.length; i++) {
+    inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
+
+    //стиль input при просмотре
+    inputElem[i].style.border = '2px solid #800080';
+    inputElem[i].style.borderBottom = '2px solid #00BFFF';
+    inputElem[i].style.borderRadius = '0px';
+    inputElem[i].style.color = '#ffffff';
+    inputElem[i].style.backgroundColor = '#800080';
+  }
+
+  //включение видимости кнопки календаря
+  let element = document.getElementById('dob');
+  element.style['-webkit-calendar-picker-indicator'] = 'display: block;';
+*/
+  
+}
+
 function innerText1(input1,idNameDiv,tableItem) {
 
   let textInput = input1.value;
