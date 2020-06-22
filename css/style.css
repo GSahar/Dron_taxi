@@ -63,6 +63,61 @@ body {
 	margin-left: 80px;
 	
 	max-width: 350px;
+	/**/
+}
+
+.window-registration {
+	visibility: visible;
+	position: absolute;
+	left: 35%;
+	top: 10%;
+	/*margin-top: 145px;
+	margin-left: 80px;*/
+	
+	background-color: #800080;
+	padding: 25px 25px 30px 25px;
+	max-width: 400px;
+	width: 400px;
+
+	visibility: hidden;
+}
+
+.input-password-front {
+	position: relative;
+}
+.button-open-eye-front, .button-conf-open-eye-front {
+	width: 18px;
+	height: 14px;
+
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	margin-top: 38px;
+	margin-right: 20px;
+
+	background-image: url("../svg/open-eye.svg");
+	background-repeat: no-repeat;
+	display: none;
+
+	cursor:pointer;
+}
+
+.button-close-eye-front, .button-conf-close-eye-front {
+	width: 18px;
+	height: 14px;
+
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	margin-top: 38px;
+	margin-right: 20px;
+
+	background-image: url("../svg/closed-eye.svg");
+	background-repeat: no-repeat;
+
+	cursor:pointer;
 }
 
 /*заголовок формы*/
@@ -73,6 +128,10 @@ body {
 	color: #ffffff;
 
 	margin-bottom: 12px;
+}
+
+.head-form-reg {
+	font-size: 20px;
 }
 
 /*форма отправки запроса*/
@@ -211,6 +270,21 @@ body {
 /*кнопка регистрации*/
 .button-regist {
 	width: 100%;
+}
+
+.button-regist1 {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.input {
+	width: 100%;
+	min-width: 115px;
+}
+
+.input:nth-child(even) {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 
