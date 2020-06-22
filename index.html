@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dron taxi</title>
     <link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/loadFile.js"></script>
+    <script src="js/hideElement.js"></script>
 </head>
 <body>
     <header class="header">    
@@ -13,7 +15,7 @@
             <img class="logo" src="svg/Logo_Dron_Taxi.svg" alt="логотип">
             <h2 class="logo-text"> dron taxi</h2>
         </div>
-        <div class="window-autoris">
+        <div class="window-autoris" id="window-autoris">
             <h3 class="head-form">авторизация</h3>
             <form class="form" action="">
                 <div class="input-login">
@@ -32,9 +34,66 @@
                     <button type="button" onclick="location.href='profile.html';" class="button blue-button button-enter"> Войти</button>
                 </div>
                 
-                <button type="button" onclick="location.href='https://github.com/GSahar/Dron_taxi';" class="button green-button button-regist">Регистарция</button>            
+                <button type="button" onclick="buttonReg('window-registration')" class="button green-button button-regist">Регистарция</button>            
             </form>
 
+        </div>
+        <div class="window-registration" id="window-registration">
+            <h3 class="head-form head-form-reg">регистарция</h3>
+            <form class="form-reg" action="">
+                <div class="input input-surname-front">
+                    <label class="heder-input" for="surname">Фамилия<span
+                            class="asterisk hideElement">*</span></label>
+                    <input type="text" value="" class="input-field" id="surname"
+                        placeholder="Введите фамилию" required>
+                </div>
+
+                <div class="input input-name-front">
+                    <label class="heder-input" for="name">Имя<span
+                            class="asterisk hideElement">*</span></label>
+                    <input type="text" value="" class="input-field" id="name"
+                        placeholder="Введите имя" required>
+                </div>
+                <div class="input input-Email-front">
+                    <label class="heder-input" for="email">Email<span
+                            class="asterisk hideElement">*</span></label>
+                    <input type="email" value="" class="input-field" id="email"
+                        placeholder="Введите адрес почты" required>
+                </div>
+                <!--div class="group-check-button">
+                    <div class="input-check">                
+                        <input class="checkbox" type="checkbox" id="check-save">
+                        <label class="check-text" for="check-save">Запомнить</label>
+                    </div>
+                    <button type="button" onclick="location.href='profile.html';" class="button blue-button button-enter"> Войти</button>
+                </div-->
+                <div class="input input-password-front">
+                    <label class="heder-input" for="pass">Пароль<span class="asterisk ">*</span></label>
+                    <input type="password" value="" class="input-field input-pass-front"
+                        id="pass" placeholder="Введите пароль" required>
+                    <div class="button-open-eye-front" id="button-open-eye-front"
+                        onclick="replaceType('button-open-eye-front','button-close-eye-front','input-pass-front','password')">
+                    </div>
+                    <div class="button-close-eye-front" id="button-close-eye-front"
+                        onclick="replaceType('button-close-eye-front','button-open-eye-front','input-pass-front','text')">
+                    </div>
+                </div>
+
+                <div class="input input-password-front">
+                    <label class="heder-input" for="rpass-front">Подтвердить пароль <span
+                            class="asterisk ">*</span></label>
+                    <input type="password" value=""
+                        class="input-field input-conf-pass-front" id="rpass-front"
+                        placeholder="Повторите пароль" required>
+                    <div class="button-conf-open-eye-front" id="button-conf-open-eye-front"
+                        onclick="replaceType('button-conf-open-eye-front','button-conf-close-eye-front','input-conf-pass-front','password')">
+                    </div>
+                    <div class="button-conf-close-eye-front" id="button-conf-close-eye-front"
+                        onclick="replaceType('button-conf-close-eye-front','button-conf-open-eye-front','input-conf-pass-front','text')">
+                    </div>
+                </div>
+                <button type="button" onclick="buttonReg('window-autoris')" form="form-reg" class="button green-button button-regist1">Регистарция</button>            
+            </form>
         </div>
     </header>
 </body>
