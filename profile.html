@@ -39,7 +39,7 @@
             <footer class="footer-menu">
                 <div class="items-menu">
                     <button class="tablink-menu"
-                        onclick="openMenuPage('container-exit','tabcontent-menu','tablink-menu', this, '#7fff7f66')"><span
+                    onclick="location.href='index.html';"><span
                             class="button-text button-exit">Выход</span></button>
                 </div>
             </footer>
@@ -1026,7 +1026,7 @@
                                     placeholder="Наименование">
                             </div>
                             <button class="button blue-button button-add" id="button-add1"
-                            onclick="buttonEdit1()">
+                            onclick="buttonAdd()">
                                 <span class="button-edit-text">Добавить</span> </button>
                         </div>
                         <div class="">
@@ -1035,7 +1035,7 @@
                                     <div class="head-table1">
                                         <div class="item-head sysname-header">Системное имя</div>
                                         <div class="item-head name-role-header">Наименование</div>
-                                        <div class="item-head date-end-header">Дата начала</div>
+                                        <div class="item-head date-end-header">Дата окончания</div>
                                     </div>
                                     <!--h3 class="head-items-role">Доступные роли</h3-->
                                     <div class="items-role2">
@@ -1047,7 +1047,7 @@
                                                 <span class="text-item" id="item-name-god">Бог</span>
                                             </div>
                                             <div class="item-value date-end-item-value">
-                                                <span class="text-item">14.05.2020</span>
+                                                <span class="text-item">14.01.2019</span>
                                             </div>
                                             <div class="item-value group-button-item-value">
                                                 <div class="edit-item1" onclick="buttonEdit3()">
@@ -1068,7 +1068,7 @@
                                                 <span class="text-item" id="item-name-adm">Администратор</span>
                                             </div>
                                             <div class="item-value date-end-item-value">
-                                                <span class="text-item">14.05.2020</span>
+                                                <span class="text-item">14.01.2020</span>
                                             </div>
                                             <div class="item-value group-button-item-value">
                                                 <div class="edit-item1" onclick="buttonEdit3()">
@@ -1090,13 +1090,34 @@
                                                 <span class="text-item" id="item-name-usr">Пользователь</span>
                                             </div>
                                             <div class="item-value date-end-item-value">
-                                                <span class="text-item">14.05.2020</span>
+                                                <span class="text-item">14.01.2018</span>
                                             </div>
                                             <div class="item-value group-button-item-value">
                                                 <div class="edit-item1" onclick="buttonEdit3()">
     
                                                 </div>
                                                 <div class="del-item1" onclick="buttonDelete('role-u')">
+    
+                                                </div>                                                
+                                            </div>
+                                            <!--span class="text-item">Пользователь</span><span class="button-item"></span-->
+                                        </div>
+                                        <div class="item-role2" 
+                                            onclick="openMenuPage('detail-add2','tab-detail2','item-role2', this, '#800080')" id="role-add">
+                                            <div class="item-value sysname-role-item-value">
+                                                <span class="text-item" id="item-sysname-add"></span>
+                                            </div>
+                                            <div class="item-value name-role-item-value">
+                                                <span class="text-item" id="item-name-add"></span>
+                                            </div>
+                                            <div class="item-value date-end-item-value">
+                                                <span class="text-item">14.01.2021</span>
+                                            </div>
+                                            <div class="item-value group-button-item-value">
+                                                <div class="edit-item1" onclick="buttonEdit3()">
+    
+                                                </div>
+                                                <div class="del-item1" onclick="buttonDelete('role-add')">
     
                                                 </div>                                                
                                             </div>
@@ -1123,7 +1144,7 @@
 
                                                 <div class="input input-start-date">
                                                     <label class="heder-input" for="start-date">Дата начала</label>
-                                                    <input type="date" value="2019-01-14"
+                                                    <input type="date" 
                                                         class="input-field-role field-date-role" id="start-date"
                                                         placeholder="Введите дату" required>
                                                 </div>
@@ -1137,15 +1158,19 @@
 
                                                 <div class="input input-finish-date">
                                                     <label class="heder-input" for="end-date">Дата окончания</label>
-                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                    <input type="date" value="2019-01-14" class="input-field-role field-date-role"
                                                         id="end-date" placeholder="Введите дату" required>
                                                 </div>
                                             </div>
                                         </div>
-
-
+                                        
                                         <div class="access-function1">
-                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="head-access-function1">
+                                                <h3 class="head-access-function">Доступные функции</h3>
+                                                <button class="button blue-button button-add-function" id="button-add-function" onclick="buttonAddFunc()">
+                                                <span class="button-edit-text">Добавить</span> </button>
+                                            </div>
+                                            
                                             <div class="items-access-function">
                                                 <div class="item-function2">
                                                     <span class="text-item">Управление пользователями</span><span
@@ -1180,7 +1205,7 @@
 
                                                 <div class="input input-start-date">
                                                     <label class="heder-input" for="start-date2">Дата начала</label>
-                                                    <input type="date" value="2020-01-14"
+                                                    <input type="date" 
                                                         class="input-field-role field-date-role" id="start-date2"
                                                         placeholder="Введите дату" required>
                                                 </div>
@@ -1194,14 +1219,18 @@
 
                                                 <div class="input input-finish-date">
                                                     <label class="heder-input" for="end-date2">Дата окончания</label>
-                                                    <input type="date" value="" class="input-field-role field-date-role"
+                                                    <input type="date" value="2020-01-14" class="input-field-role field-date-role"
                                                         id="end-date2" placeholder="Введите дату" required>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="access-function1">
-                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="head-access-function1">
+                                                <h3 class="head-access-function">Доступные функции</h3>
+                                                <button class="button blue-button button-add-function " id="button-add-function" onclick="buttonAddFunc()">
+                                                <span class="button-edit-text">Добавить</span> </button>
+                                            </div>
                                             <div class="items-access-function">
                                                 <div class="item-function2">
                                                     <span class="text-item">Управление пользователями</span><span
@@ -1236,9 +1265,9 @@
 
                                                 <div class="input input-start-date">
                                                     <label class="heder-input" for="start-date3">Дата начала</label>
-                                                    <input type="date" value="2018-01-14"
+                                                    <input type="date" 
                                                         class="input-field-role field-date-role" id="start-date3"
-                                                        placeholder="Введите дату" required>
+                                                        placeholder="Введите дату"  required>
                                                 </div>
                                             </div>
                                             <div class="group-block2">
@@ -1250,14 +1279,18 @@
 
                                                 <div class="input input-finish-date">
                                                     <label class="heder-input" for="end-date3">Дата окончания</label>
-                                                    <input type="date" value="" class="input-field-role field-date-role"
-                                                        id="end-date3" placeholder="Введите дату" required>
+                                                    <input type="date" value="2018-01-14" class="input-field-role field-date-role"
+                                                        id="end-date3" placeholder="Введите дату"  required>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="access-function1">
-                                            <h3 class="head-access-function">Доступные функции</h3>
+                                            <div class="head-access-function1">
+                                                <h3 class="head-access-function">Доступные функции</h3>
+                                                <button class="button blue-button button-add-function" id="button-add-function" onclick="buttonAddFunc()">
+                                                <span class="button-edit-text">Добавить</span> </button>
+                                            </div>
                                             <div class="items-access-function">
 
                                                 <div class="item-function2">
