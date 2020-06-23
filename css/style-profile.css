@@ -553,12 +553,19 @@ input[type="radio"]:checked + label span {
 	position: relative;
 }
 
-.head-items-role,.head-detail-role,.head-access-function,.items-role2 {
+.head-items-role,.head-detail-role,.items-role2 {
 	font-weight: 500;
 	font-size: 18px;
 	width: 94%;
 	margin-bottom: 20px;
 	
+}
+
+.head-access-function {
+	font-weight: 500;
+	font-size: 18px;
+	width: 100%;
+	margin-top: 10px;
 }
 
 .items-role,.items-access-function,.items-role2 {
@@ -653,7 +660,7 @@ input[type="radio"]:checked + label span {
 }
 
 .detail-role {
-	width: 46%;
+	width: 50%;
 	margin-left: 11%;
 }
 
@@ -998,7 +1005,7 @@ input[type="radio"]:checked + label span {
 	display: none;
 }
 
-.button-add {
+.button-add,.button-add-function {
 	background-image: url("../svg/add-button.svg");
 	background-repeat: no-repeat;
 	background-size: 24px;
@@ -1146,6 +1153,17 @@ input[type="radio"]:checked + label span {
 /**/
 .numer:nth-child(even) {
 	margin: 0 5px;
+}
+
+.head-access-function1 {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 10px;
+	justify-content: last baseline;
+}
+
+.button-add-function {
+	visibility: hidden;
 }
 
 @media (max-width: 1900px) {
