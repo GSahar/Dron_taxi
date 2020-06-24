@@ -178,7 +178,7 @@
                         <div id="Role" class="tabcontent">
                             <div class="container-role">
                                 <section class="list-role">
-                                    <h3 class="head-items-role">Доступные роли</h3>
+                                    <h3 class="head-items-role">Доступные роли</h3>                                    
                                     <div class="items-role">
                                         <button class="item-role"
                                             onclick="openMenuPage('detail-god','tab-detail','item-role', this, '#800080')"
@@ -856,21 +856,25 @@
                         <div id="Role1" class="tabcontent1">
                             <div class="container-role">
                                 <section class="list-role">
-                                    <h3 class="head-items-role">Доступные роли</h3>
+                                    <div class="head-access-function1">
+                                        <h3 class="head-access-function">Доступные роли</h3>
+                                        <button class="button blue-button button-add-role" style="display: block;" id="button-add-function" onclick="buttonAddFunc()">
+                                        <span class="button-edit-text">Добавить</span> </button>
+                                    </div>
                                     <div class="items-role">
                                         <button class="item-role1"
                                             onclick="openMenuPage('detail-god1','tab-detail1','item-role1', this, '#800080')"
                                             id="defaultOpenRole1">
-                                            <span class="text-item">Бог</span><span class="button-item"></span>
+                                            <span class="text-item">Бог</span><span class="button-item-del"></span>
                                         </button>
                                         <button class="item-role1"
                                             onclick="openMenuPage('detail-admin1','tab-detail1','item-role1', this, '#800080')">
                                             <span class="text-item">Администратор</span><span
-                                                class="button-item"></span>
+                                                class="button-item-del"></span>
                                         </button>
                                         <button class="item-role1"
                                             onclick="openMenuPage('detail-user1','tab-detail1','item-role1', this, '#800080')">
-                                            <span class="text-item">Пользователь</span><span class="button-item"></span>
+                                            <span class="text-item">Пользователь</span><span class="button-item-del"></span>
                                         </button>
                                     </div>
                                 </section>
