@@ -312,18 +312,21 @@ function buttonEdit2() {
 function buttonDelete(idField) {
   document.getElementById(idField).remove();
 
-  if(idField === "defaultOpenRole2"){
-    document.getElementById("detail-god2").remove();    
+  if (idField === "defaultOpenRole2") {
+    document.getElementById("detail-god2").remove();
   }
 
-  if(idField === "role-a"){
-    document.getElementById("detail-admin2").remove();    
+  if (idField === "role-a") {
+    document.getElementById("detail-admin2").remove();
   }
 
-  if(idField === "role-u"){
-    document.getElementById("detail-user2").remove();  
-    document.getElementById("defaultOpenItemTable1").style.display = "none"; 
-      
+  if (idField === "role-u") {
+    document.getElementById("detail-user2").remove();
+    document.getElementById("defaultOpenItemTable1").style.display = "none";
+
+  }
+  else {
+    document.getElementById(idField).remove();
   }
 
 }
@@ -363,13 +366,15 @@ function changeBg(idTableItem, classTableItem) {
 
 
 /*функция вызываемая при нажатии кнопки редактирования */
-function buttonEdit3() {
+function buttonEdit3(idButton) {
   let i, contentAsterisk;
 
 
   //кнопка редактирования
   document.getElementById("button-add1").style.visibility = "hidden";
- 
+
+  document.getElementById(idButton).style.backgroundImage = 'url("svg/edit-gray.svg")';
+
 
   //Элементы которые изначально скрыты
   //кнопка редактирования
@@ -398,7 +403,7 @@ function buttonEdit3() {
     inputElem[i].style.backgroundColor = '#ffffff';
 
   }
- 
+
   //отключение видимости кнопки календаря
   let element = document.getElementById('dob');
   element.style['-webkit-calendar-picker-indicator'] = 'display: none;';
@@ -413,7 +418,6 @@ function buttonCancel3(namefield) {
   //кнопка редактирования
   document.getElementById("button-add1").style.visibility = "visible";
 
-
   //Элементы которые изначально скрыты
   //кнопка обновитить фотографию
   //поле подтверждения пароля
@@ -423,12 +427,17 @@ function buttonCancel3(namefield) {
     contentAsterisk[i].style.display = "none";
   }
 
+  contentAsterisk = document.getElementsByClassName(namefield);
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.backgroundImage = 'url("svg/edit-table.svg")';
+  }
+
   contentAsterisk = document.getElementsByClassName("button-add-function");
   for (i = 0; i < contentAsterisk.length; i++) {
     contentAsterisk[i].style.visibility = "hidden";
   }
 
- 
+
   let inputElem = document.getElementsByClassName("input-field-role");
   for (i = 0; i < inputElem.length; i++) {
     inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
@@ -440,6 +449,8 @@ function buttonCancel3(namefield) {
     inputElem[i].style.color = '#ffffff';
     inputElem[i].style.backgroundColor = '#800080';
   }
+
+  document.getElementById('role-add').style.display = 'none';
 
   //включение видимости кнопки календаря
   let element = document.getElementById('dob');
@@ -462,7 +473,19 @@ function buttonCancel3(namefield) {
   document.getElementById('sys-name-usr').value = "User";
   document.getElementById('denomination-usr').value = "Пользователь";
   document.getElementById('head-detail-usr').innerHTML = 'Роль: Пользователь';
-  
+
+  document.getElementById('item-sysname-add').innerHTML = "";
+  document.getElementById('item-name-add').innerHTML = "";
+  document.getElementById('sys-name-add').value = "";
+  document.getElementById('denomination-add').value = "";
+  document.getElementById('head-detail-add').innerHTML = 'Роль: ';
+
+  document.getElementById('items-func-11').style.display= 'none';
+
+		document.getElementById('items-func-9').style.display= 'none';
+
+		document.getElementById('items-func-10').style.display= 'none';
+
 }
 
 function buttonSave3(namefield) {
@@ -489,7 +512,12 @@ function buttonSave3(namefield) {
     contentAsterisk[i].style.visibility = "hidden";
   }
 
- 
+  contentAsterisk = document.getElementsByClassName(namefield);
+  for (i = 0; i < contentAsterisk.length; i++) {
+    contentAsterisk[i].style.backgroundImage = 'url("svg/edit-table.svg")';
+  }
+
+
   let inputElem = document.getElementsByClassName("input-field-role");
   for (i = 0; i < inputElem.length; i++) {
     inputElem[i].setAttribute('disabled', 'disabled'); // сделать неактивной     
@@ -506,14 +534,14 @@ function buttonSave3(namefield) {
   let element = document.getElementById('dob');
   element.style['-webkit-calendar-picker-indicator'] = 'display: block;';
 
-  
+
 }
 
 /*функция вызываемая при нажатии кнопки редактирования */
 function buttonAdd() {
   let i, contentAsterisk;
 
- 
+
   //кнопка редактирования
   document.getElementById("button-add1").style.visibility = "hidden";
   //Элементы которые изначально скрыты
@@ -526,12 +554,18 @@ function buttonAdd() {
     contentAsterisk[i].style.visibility = "visible";
   }
 
+  /*document.getElementById('button-add1').onclick = function () {
+    
+  };*/
+  document.getElementById('role-add').style.display = 'flex';
+  document.getElementById('role-add').click;
+
   contentAsterisk = document.getElementsByClassName("group-button1");
   for (i = 0; i < contentAsterisk.length; i++) {
     contentAsterisk[i].style.display = "block";
   }
 
-  let inputElem = document.getElementsByClassName("input-field-role");
+  let inputElem = document.getElementsByClassName("input-field-role-add");
   for (i = 0; i < inputElem.length; i++) {
     inputElem[i].removeAttribute('disabled');// сделать активной  
 
@@ -543,30 +577,40 @@ function buttonAdd() {
     inputElem[i].style.backgroundColor = '#ffffff';
 
   }
+}
 
-  document.getElementById('item-sysname-god').innerHTML = "";
-  document.getElementById('item-name-god').innerHTML = "";
-  document.getElementById('sys-name-god').value = "";
-  document.getElementById('denomination-god').value = "";
-  document.getElementById('head-detail-god').innerHTML = 'Роль: ';
+function buttonAddFunc() {
+  document.getElementById('scroll-window').style.visibility = 'Visible';
+  
+  
+}
 
-  document.getElementById('item-sysname-adm').innerHTML = "";
-  document.getElementById('item-name-adm').innerHTML = "";
-  document.getElementById('sys-name-adm').value = "";
-  document.getElementById('denomination-adm').value = "";
-  document.getElementById('head-detail-adm').innerHTML = 'Роль: ';
+function buttonSave4() {
 
-  document.getElementById('item-sysname-usr').innerHTML = "";
-  document.getElementById('item-name-usr').innerHTML = "";
-  document.getElementById('sys-name-usr').value = "";
-  document.getElementById('denomination-usr').value = "";
-  document.getElementById('head-detail-usr').innerHTML = 'Роль: ';
+  let chbox1,chbox2,chbox3,chbox4;
+  chbox1=document.getElementById('check-save1');
+  chbox2=document.getElementById('check-save2');
+  chbox3=document.getElementById('check-save3');
+  chbox4=document.getElementById('check-save4');
 
+  if (chbox1.checked) {
+    document.getElementById('items-func-11').style.display= 'block';
+  }
+  if (chbox2.checked) {
+		document.getElementById('items-func-9').style.display= 'block';
+  }
+  if (chbox3.checked) {
+		document.getElementById('items-func-10').style.display= 'block';
+  }
+  /*if (chbox4.checked) {
+		document.getElementById('items-func-7').style.display= 'block';
+  }*/
+  
+  document.getElementById('scroll-window').style.visibility = 'hidden';
+}
 
-
-  //отключение видимости кнопки календаря
-  let element = document.getElementById('dob');
-  element.style['-webkit-calendar-picker-indicator'] = 'display: none;';
+function buttonCancel4() {
+  document.getElementById('scroll-window').style.visibility = 'hidden';
 }
 
 
@@ -577,7 +621,7 @@ function buttonReg(idWindow) {
   let i, contentAsterisk;
 
   //кнопка редактирования
-  if(idWindow=='window-autoris'){
+  if (idWindow == 'window-autoris') {
     document.getElementById("window-autoris").style.visibility = "visible";
     document.getElementById("window-registration").style.visibility = "hidden";
   }
@@ -587,13 +631,13 @@ function buttonReg(idWindow) {
   }
 }
 
-function innerText1(input1,idNameDiv,tableItem) {
+function innerText1(input1, idNameDiv, tableItem) {
 
   let textInput = input1.value;
 
-  if(idNameDiv !== ''){
-    document.getElementById(idNameDiv).innerHTML = 'Роль: '+textInput;
+  if (idNameDiv !== '') {
+    document.getElementById(idNameDiv).innerHTML = 'Роль: ' + textInput;
   }
-  
+
   document.getElementById(tableItem).innerHTML = textInput;
 }
