@@ -715,6 +715,16 @@ input[type="radio"]:checked + label span {
 	margin: -2px 30px;
 }
 
+.button-item-del {
+	background-image: url("../svg/delete-grin.svg");
+	width: 17px;
+	height: 20px;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+	margin: -2px 30px;
+}
+
 .button-item::before,.button-item-func::before  {
 	content: "";
 	display: block;
@@ -761,7 +771,7 @@ input[type="radio"]:checked + label span {
 }
 
 .group-input-search {
-	width: 50%;
+	width: 45%;
 	margin-left: 50px;
 }
 
@@ -1034,7 +1044,7 @@ input[type="radio"]:checked + label span {
 	display: none;
 }
 
-.button-add,.button-add-function {
+.button-add,.button-add-function,.button-add-role {
 	background-image: url("../svg/add-button.svg");
 	background-repeat: no-repeat;
 	background-size: 24px;
